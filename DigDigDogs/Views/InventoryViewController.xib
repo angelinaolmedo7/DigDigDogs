@@ -27,38 +27,24 @@
                     <rect key="frame" x="20" y="216.5" width="374" height="625.5"/>
                     <subviews>
                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-AE-LO8">
-                            <rect key="frame" x="0.0" y="0.0" width="360" height="497.5"/>
+                            <rect key="frame" x="0.0" y="0.0" width="388" height="677"/>
                             <subviews>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="trashLabel" translatesAutoresizingMaskIntoConstraints="NO" id="7A9-3c-jit">
-                                    <rect key="frame" x="0.0" y="0.0" width="360" height="242.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="388" height="129"/>
                                 </imageView>
-                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVS-Oj-1JQ">
-                                    <rect key="frame" x="0.0" y="242.5" width="360" height="87"/>
-                                    <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-6R-JcA">
-                                            <rect key="frame" x="0.0" y="0.0" width="360" height="87"/>
-                                            <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cap" translatesAutoresizingMaskIntoConstraints="NO" id="AiP-YL-TUi">
-                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="87"/>
-                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
-                                                </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naz-d3-V93">
-                                                    <rect key="frame" x="97" y="0.0" width="263" height="87"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                        </stackView>
-                                    </subviews>
-                                </stackView>
                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vCommonLabel" translatesAutoresizingMaskIntoConstraints="NO" id="fJx-uS-W3k">
-                                    <rect key="frame" x="0.0" y="329.5" width="360" height="168"/>
+                                    <rect key="frame" x="0.0" y="129" width="388" height="168"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commonLabel" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-5l-qEM">
+                                    <rect key="frame" x="0.0" y="297" width="388" height="131"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncommonLabel" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-g7-EI8">
+                                    <rect key="frame" x="0.0" y="428" width="388" height="118"/>
+                                </imageView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unusualLabel" translatesAutoresizingMaskIntoConstraints="NO" id="CVR-I0-Rgq">
+                                    <rect key="frame" x="0.0" y="546" width="388" height="131"/>
                                 </imageView>
                             </subviews>
-                            <constraints>
-                                <constraint firstItem="7A9-3c-jit" firstAttribute="width" secondItem="WaW-AE-LO8" secondAttribute="width" id="Dwp-qb-DKH"/>
-                            </constraints>
                         </stackView>
                     </subviews>
                     <constraints>
@@ -86,9 +72,11 @@
         </view>
     </objects>
     <resources>
-        <image name="cap" width="117" height="87"/>
+        <image name="commonLabel" width="338" height="131"/>
         <image name="inventoryButton" width="462" height="173"/>
         <image name="trashLabel" width="360" height="129"/>
+        <image name="uncommonLabel" width="388" height="118"/>
+        <image name="unusualLabel" width="369" height="131"/>
         <image name="vCommonLabel" width="319" height="168"/>
     </resources>
 </document>

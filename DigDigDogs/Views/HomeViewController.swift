@@ -9,12 +9,15 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    
+    var user: User!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpBackground()
-
-        // Do any additional setup after loading the view.
+        setUpBackground() // add background view. For now default grass.
+        if user == nil {
+            user = User()  // init new user object if does not already exist. This includes an inventory object and list of dogs.
+        }
     }
     
     func setUpBackground(imageName: String = "bg-grass"){
@@ -31,19 +34,14 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func inventoryButtonSelected(_ sender: Any) {
+        var invController = InventoryViewController()
+        self.view.window!.rootViewController = invController
+//        self.present(invController, animated: true, completion: nil)
         
     }
     @IBAction func dogsButtonSelected(_ sender: Any) {
-        
+        var dogController = DogSelectionTableViewController()
+        dogController.user = self.user
+        self.present(dogController, animated: true, completion: nil)
     }
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

@@ -17,6 +17,13 @@
 		295E92692421A1170052C890 /* HomeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E92672421A1170052C890 /* HomeViewController.xib */; };
 		295E926D2421A64A0052C890 /* InventoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E926B2421A64A0052C890 /* InventoryViewController.swift */; };
 		295E926E2421A64A0052C890 /* InventoryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E926C2421A64A0052C890 /* InventoryViewController.xib */; };
+		295E92702421CBC60052C890 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E926F2421CBC60052C890 /* Dog.swift */; };
+		295E92722421D3E90052C890 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E92712421D3E90052C890 /* User.swift */; };
+		295E927524220E9A0052C890 /* DogSelectionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E927324220E990052C890 /* DogSelectionTableViewCell.swift */; };
+		295E927624220E9A0052C890 /* DogSelectionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E927424220E990052C890 /* DogSelectionTableViewCell.xib */; };
+		295E9279242211790052C890 /* DogSelectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9277242211790052C890 /* DogSelectionTableViewController.swift */; };
+		295E927A242211790052C890 /* DogSelectionTableViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E9278242211790052C890 /* DogSelectionTableViewController.xib */; };
+		295E927D2422146F0052C890 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E927C2422146F0052C890 /* UIViewControllerExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +39,13 @@
 		295E92672421A1170052C890 /* HomeViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeViewController.xib; sourceTree = "<group>"; };
 		295E926B2421A64A0052C890 /* InventoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryViewController.swift; sourceTree = "<group>"; };
 		295E926C2421A64A0052C890 /* InventoryViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryViewController.xib; sourceTree = "<group>"; };
+		295E926F2421CBC60052C890 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		295E92712421D3E90052C890 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		295E927324220E990052C890 /* DogSelectionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogSelectionTableViewCell.swift; sourceTree = "<group>"; };
+		295E927424220E990052C890 /* DogSelectionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogSelectionTableViewCell.xib; sourceTree = "<group>"; };
+		295E9277242211790052C890 /* DogSelectionTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogSelectionTableViewController.swift; sourceTree = "<group>"; };
+		295E9278242211790052C890 /* DogSelectionTableViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogSelectionTableViewController.xib; sourceTree = "<group>"; };
+		295E927C2422146F0052C890 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +78,7 @@
 		295E924C242193ED0052C890 /* DigDigDogs */ = {
 			isa = PBXGroup;
 			children = (
+				295E927B242214580052C890 /* Controller */,
 				295E926A2421A5B00052C890 /* Models */,
 				295E92612421948C0052C890 /* Views */,
 				295E924D242193ED0052C890 /* AppDelegate.swift */,
@@ -92,6 +107,10 @@
 				295E92672421A1170052C890 /* HomeViewController.xib */,
 				295E926B2421A64A0052C890 /* InventoryViewController.swift */,
 				295E926C2421A64A0052C890 /* InventoryViewController.xib */,
+				295E927324220E990052C890 /* DogSelectionTableViewCell.swift */,
+				295E927424220E990052C890 /* DogSelectionTableViewCell.xib */,
+				295E9277242211790052C890 /* DogSelectionTableViewController.swift */,
+				295E9278242211790052C890 /* DogSelectionTableViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -99,8 +118,18 @@
 		295E926A2421A5B00052C890 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				295E926F2421CBC60052C890 /* Dog.swift */,
+				295E92712421D3E90052C890 /* User.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		295E927B242214580052C890 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				295E927C2422146F0052C890 /* UIViewControllerExtensions.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -164,6 +193,8 @@
 				295E925A242193F10052C890 /* LaunchScreen.storyboard in Resources */,
 				295E9257242193F10052C890 /* Preview Assets.xcassets in Resources */,
 				295E92692421A1170052C890 /* HomeViewController.xib in Resources */,
+				295E927624220E9A0052C890 /* DogSelectionTableViewCell.xib in Resources */,
+				295E927A242211790052C890 /* DogSelectionTableViewController.xib in Resources */,
 				295E926E2421A64A0052C890 /* InventoryViewController.xib in Resources */,
 				295E9254242193F10052C890 /* Assets.xcassets in Resources */,
 			);
@@ -178,9 +209,14 @@
 			files = (
 				295E92682421A1170052C890 /* HomeViewController.swift in Sources */,
 				295E924E242193ED0052C890 /* AppDelegate.swift in Sources */,
+				295E927D2422146F0052C890 /* UIViewControllerExtensions.swift in Sources */,
+				295E92702421CBC60052C890 /* Dog.swift in Sources */,
 				295E926D2421A64A0052C890 /* InventoryViewController.swift in Sources */,
 				295E9250242193ED0052C890 /* SceneDelegate.swift in Sources */,
+				295E927524220E9A0052C890 /* DogSelectionTableViewCell.swift in Sources */,
+				295E9279242211790052C890 /* DogSelectionTableViewController.swift in Sources */,
 				295E9252242193ED0052C890 /* ContentView.swift in Sources */,
+				295E92722421D3E90052C890 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
