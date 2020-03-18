@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBackground()
+
         // Do any additional setup after loading the view.
     }
     
@@ -21,13 +22,13 @@ class HomeViewController: UIViewController {
         background.translatesAutoresizingMaskIntoConstraints = false
         background.contentMode = .scaleAspectFill
         view.addSubview(background)
+        view.sendSubviewToBack(background)
         
         background.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         background.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         background.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         background.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
-
 
     /*
     // MARK: - Navigation

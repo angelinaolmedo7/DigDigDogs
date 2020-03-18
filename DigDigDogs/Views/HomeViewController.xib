@@ -17,14 +17,36 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AOB-PB-lfs">
-                    <rect key="frame" x="-22" y="290" width="240" height="128"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yRG-7M-yZI" userLabel="inventoryButton">
+                    <rect key="frame" x="20" y="64" width="165.5" height="62"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="yRG-7M-yZI" secondAttribute="height" multiplier="462:173" id="sMQ-D8-eR0"/>
+                    </constraints>
+                    <state key="normal" image="inventoryButton"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-F0-FCH" userLabel="dogsButton">
+                    <rect key="frame" x="20" y="146" width="99.5" height="49"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="yDW-F0-FCH" secondAttribute="height" multiplier="107:53" id="3c3-Pl-f9m"/>
+                    </constraints>
+                    <state key="normal" image="dogsButton"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="yDW-F0-FCH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LLq-YE-3UH"/>
+                <constraint firstItem="yDW-F0-FCH" firstAttribute="top" secondItem="yRG-7M-yZI" secondAttribute="bottom" constant="20" id="SZi-BN-EmA"/>
+                <constraint firstItem="yDW-F0-FCH" firstAttribute="width" secondItem="yRG-7M-yZI" secondAttribute="width" multiplier="0.6" id="ZUs-2f-YZn"/>
+                <constraint firstItem="yRG-7M-yZI" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="bgX-0y-DVc"/>
+                <constraint firstItem="yRG-7M-yZI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fuV-Zx-g6g"/>
+                <constraint firstItem="yRG-7M-yZI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rag-ZH-6FK"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="147"/>
         </view>
     </objects>
+    <resources>
+        <image name="dogsButton" width="321" height="159"/>
+        <image name="inventoryButton" width="462" height="173"/>
+    </resources>
 </document>
