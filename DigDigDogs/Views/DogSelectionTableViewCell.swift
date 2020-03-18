@@ -13,6 +13,9 @@ class DogSelectionTableViewCell: UITableViewCell {
     static let identifier = "DogSelectionTableViewCell"
 
     @IBOutlet weak var dogImage: UIImageView!
+    @IBOutlet weak var dogBreedLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var dpLabel: UILabel!
     
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
@@ -31,6 +34,9 @@ class DogSelectionTableViewCell: UITableViewCell {
     
     func setInfo (dog: Dog) {
         dogImage.image = dog.image
+        dogBreedLabel.text = dog.breed
+        nameLabel.text = dog.dogName
+        dpLabel.text = "\(String(describing: dog.dp))"
     }
     
 }
