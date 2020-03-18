@@ -30,6 +30,12 @@ class HomeViewController: UIViewController {
         background.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
     }
 
+    @IBAction func inventoryButtonSelected(_ sender: Any) {
+        
+    }
+    @IBAction func dogsButtonSelected(_ sender: Any) {
+        
+    }
     /*
     // MARK: - Navigation
 

@@ -23,6 +23,9 @@
                         <constraint firstAttribute="width" secondItem="yRG-7M-yZI" secondAttribute="height" multiplier="462:173" id="sMQ-D8-eR0"/>
                     </constraints>
                     <state key="normal" image="inventoryButton"/>
+                    <connections>
+                        <action selector="inventoryButtonSelected:" destination="-1" eventType="touchUpInside" id="0Bq-dE-JXx"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-F0-FCH" userLabel="dogsButton">
                     <rect key="frame" x="20" y="146" width="99.5" height="49"/>
@@ -30,6 +33,9 @@
                         <constraint firstAttribute="width" secondItem="yDW-F0-FCH" secondAttribute="height" multiplier="107:53" id="3c3-Pl-f9m"/>
                     </constraints>
                     <state key="normal" image="dogsButton"/>
+                    <connections>
+                        <action selector="dogsButtonSelected:" destination="-1" eventType="touchUpInside" id="R1E-ME-9Kp"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

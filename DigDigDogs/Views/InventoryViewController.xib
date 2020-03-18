@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryViewController" customModule="DigDigDogs" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="inventoryButton" translatesAutoresizingMaskIntoConstraints="NO" id="iuQ-K4-jYu">
+                    <rect key="frame" x="83" y="64" width="248" height="132.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="iuQ-K4-jYu" secondAttribute="height" multiplier="15:8" id="IML-bo-ueu"/>
+                    </constraints>
+                </imageView>
+                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sR7-ZG-NYg">
+                    <rect key="frame" x="20" y="216.5" width="374" height="625.5"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-AE-LO8">
+                            <rect key="frame" x="0.0" y="0.0" width="360" height="497.5"/>
+                            <subviews>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="trashLabel" translatesAutoresizingMaskIntoConstraints="NO" id="7A9-3c-jit">
+                                    <rect key="frame" x="0.0" y="0.0" width="360" height="242.5"/>
+                                </imageView>
+                                <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BVS-Oj-1JQ">
+                                    <rect key="frame" x="0.0" y="242.5" width="360" height="87"/>
+                                    <subviews>
+                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="-20" translatesAutoresizingMaskIntoConstraints="NO" id="CSa-6R-JcA">
+                                            <rect key="frame" x="0.0" y="0.0" width="360" height="87"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cap" translatesAutoresizingMaskIntoConstraints="NO" id="AiP-YL-TUi">
+                                                    <rect key="frame" x="0.0" y="0.0" width="117" height="87"/>
+                                                    <rect key="contentStretch" x="0.0" y="0.0" width="0.5" height="0.5"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="naz-d3-V93">
+                                                    <rect key="frame" x="97" y="0.0" width="263" height="87"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="deviceRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </stackView>
+                                    </subviews>
+                                </stackView>
+                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vCommonLabel" translatesAutoresizingMaskIntoConstraints="NO" id="fJx-uS-W3k">
+                                    <rect key="frame" x="0.0" y="329.5" width="360" height="168"/>
+                                </imageView>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="7A9-3c-jit" firstAttribute="width" secondItem="WaW-AE-LO8" secondAttribute="width" id="Dwp-qb-DKH"/>
+                            </constraints>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="WaW-AE-LO8" secondAttribute="trailing" id="0E9-tp-5uy"/>
+                        <constraint firstItem="WaW-AE-LO8" firstAttribute="top" secondItem="sR7-ZG-NYg" secondAttribute="top" id="hsM-F2-eVP"/>
+                        <constraint firstAttribute="bottom" secondItem="WaW-AE-LO8" secondAttribute="bottom" constant="-497.5" id="lXI-Vm-199"/>
+                        <constraint firstItem="WaW-AE-LO8" firstAttribute="leading" secondItem="sWD-qO-zRR" secondAttribute="leading" id="xsl-I0-9Gc"/>
+                    </constraints>
+                    <viewLayoutGuide key="contentLayoutGuide" id="nea-yA-hyQ"/>
+                    <viewLayoutGuide key="frameLayoutGuide" id="sWD-qO-zRR"/>
+                </scrollView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sR7-ZG-NYg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="6eK-fU-nSR"/>
+                <constraint firstItem="sR7-ZG-NYg" firstAttribute="top" secondItem="iuQ-K4-jYu" secondAttribute="bottom" constant="20" id="AJ4-Jl-OnS"/>
+                <constraint firstItem="iuQ-K4-jYu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VXA-B3-3G6"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sR7-ZG-NYg" secondAttribute="trailing" constant="20" id="aaP-a3-0vZ"/>
+                <constraint firstItem="iuQ-K4-jYu" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.6" id="eWi-pK-5lj"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sR7-ZG-NYg" secondAttribute="bottom" constant="20" id="gEP-wV-Zj2"/>
+                <constraint firstItem="iuQ-K4-jYu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="v1g-13-CXc"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="cap" width="117" height="87"/>
+        <image name="inventoryButton" width="462" height="173"/>
+        <image name="trashLabel" width="360" height="129"/>
+        <image name="vCommonLabel" width="319" height="168"/>
+    </resources>
+</document>
