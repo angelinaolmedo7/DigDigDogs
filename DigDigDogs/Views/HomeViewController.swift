@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
         
     }
     @IBAction func dogsButtonSelected(_ sender: Any) {
-        var dogController = DogSelectionTableViewController()
+        var dogController = DogSelectionViewController()
         dogController.user = self.user
         self.present(dogController, animated: true, completion: nil)
     }

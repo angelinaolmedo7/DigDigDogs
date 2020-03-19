@@ -16,6 +16,7 @@ class InventoryViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
        collectionView.register(InventoryCollectionViewCell.nib, forCellWithReuseIdentifier: InventoryCollectionViewCell.identifier)
+        collectionView.dataSource = self
     }
 
 }

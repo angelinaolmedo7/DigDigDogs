@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DogSelectionViewController" customModule="DigDigDogs" customModuleProvider="target">
+            <connections>
+                <outlet property="tableView" destination="wck-It-Vio" id="fUU-Z6-v1n"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmb-4o-42L">
+                    <rect key="frame" x="20" y="64" width="374" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wck-It-Vio">
+                    <rect key="frame" x="20" y="105" width="374" height="649"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV6-sD-Ngf">
+                    <rect key="frame" x="20" y="774" width="165.5" height="68"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="gV6-sD-Ngf" secondAttribute="height" multiplier="363:149" id="qKj-f3-xJg"/>
+                    </constraints>
+                    <state key="normal" image="backButton"/>
+                </button>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="gV6-sD-Ngf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3LN-6n-Zkm"/>
+                <constraint firstItem="gmb-4o-42L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5WX-no-otY"/>
+                <constraint firstItem="gV6-sD-Ngf" firstAttribute="top" secondItem="wck-It-Vio" secondAttribute="bottom" constant="20" id="9Iw-xd-GMS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gmb-4o-42L" secondAttribute="trailing" constant="20" id="DwH-Zl-efQ"/>
+                <constraint firstItem="gV6-sD-Ngf" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="Laa-pb-Yat"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gV6-sD-Ngf" secondAttribute="bottom" constant="20" id="bj5-jw-Pm5"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wck-It-Vio" secondAttribute="trailing" constant="20" id="ijJ-WF-i0h"/>
+                <constraint firstItem="gmb-4o-42L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="lgh-cb-XyH"/>
+                <constraint firstItem="wck-It-Vio" firstAttribute="top" secondItem="gmb-4o-42L" secondAttribute="bottom" constant="20" id="pAq-6v-OWL"/>
+                <constraint firstItem="wck-It-Vio" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sJH-sI-hAG"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="139" y="153"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="backButton" width="363" height="149"/>
+    </resources>
+</document>

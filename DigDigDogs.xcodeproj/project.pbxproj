@@ -32,6 +32,8 @@
 		295E9289242328EA0052C890 /* InventoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */; };
 		295E928C242351750052C890 /* LockedDogTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E928A242351750052C890 /* LockedDogTableViewCell.swift */; };
 		295E928D242351750052C890 /* LockedDogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E928B242351750052C890 /* LockedDogTableViewCell.xib */; };
+		295E9290242418470052C890 /* DogSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E928E242418470052C890 /* DogSelectionViewController.swift */; };
+		295E9291242418470052C890 /* DogSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E928F242418470052C890 /* DogSelectionViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +64,8 @@
 		295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryCollectionViewCell.xib; sourceTree = "<group>"; };
 		295E928A242351750052C890 /* LockedDogTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockedDogTableViewCell.swift; sourceTree = "<group>"; };
 		295E928B242351750052C890 /* LockedDogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockedDogTableViewCell.xib; sourceTree = "<group>"; };
+		295E928E242418470052C890 /* DogSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogSelectionViewController.swift; sourceTree = "<group>"; };
+		295E928F242418470052C890 /* DogSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogSelectionViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +137,8 @@
 				295E9286242328EA0052C890 /* InventoryCollectionViewCell.swift */,
 				295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */,
 				295E9283242325CF0052C890 /* InventoryCollectionViewController.xib */,
+				295E928E242418470052C890 /* DogSelectionViewController.swift */,
+				295E928F242418470052C890 /* DogSelectionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -219,6 +225,7 @@
 				295E9257242193F10052C890 /* Preview Assets.xcassets in Resources */,
 				295E92692421A1170052C890 /* HomeViewController.xib in Resources */,
 				295E9289242328EA0052C890 /* InventoryCollectionViewCell.xib in Resources */,
+				295E9291242418470052C890 /* DogSelectionViewController.xib in Resources */,
 				295E927624220E9A0052C890 /* DogSelectionTableViewCell.xib in Resources */,
 				295E927A242211790052C890 /* DogSelectionTableViewController.xib in Resources */,
 				295E926E2421A64A0052C890 /* InventoryViewController.xib in Resources */,
@@ -238,6 +245,7 @@
 				295E928C242351750052C890 /* LockedDogTableViewCell.swift in Sources */,
 				295E92682421A1170052C890 /* HomeViewController.swift in Sources */,
 				295E924E242193ED0052C890 /* AppDelegate.swift in Sources */,
+				295E9290242418470052C890 /* DogSelectionViewController.swift in Sources */,
 				295E927D2422146F0052C890 /* UIViewControllerExtensions.swift in Sources */,
 				295E92702421CBC60052C890 /* Dog.swift in Sources */,
 				295E926D2421A64A0052C890 /* InventoryViewController.swift in Sources */,
