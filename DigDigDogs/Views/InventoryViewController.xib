@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="InventoryViewController" customModule="DigDigDogs" customModuleProvider="target">
             <connections>
+                <outlet property="collectionView" destination="0W5-Ae-cQp" id="XXp-dg-iTa"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -23,60 +24,42 @@
                         <constraint firstAttribute="width" secondItem="iuQ-K4-jYu" secondAttribute="height" multiplier="15:8" id="IML-bo-ueu"/>
                     </constraints>
                 </imageView>
-                <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sR7-ZG-NYg">
-                    <rect key="frame" x="20" y="216.5" width="374" height="625.5"/>
-                    <subviews>
-                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="WaW-AE-LO8">
-                            <rect key="frame" x="0.0" y="0.0" width="388" height="677"/>
-                            <subviews>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" image="trashLabel" translatesAutoresizingMaskIntoConstraints="NO" id="7A9-3c-jit">
-                                    <rect key="frame" x="0.0" y="0.0" width="388" height="129"/>
-                                </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="vCommonLabel" translatesAutoresizingMaskIntoConstraints="NO" id="fJx-uS-W3k">
-                                    <rect key="frame" x="0.0" y="129" width="388" height="168"/>
-                                </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="commonLabel" translatesAutoresizingMaskIntoConstraints="NO" id="sRd-5l-qEM">
-                                    <rect key="frame" x="0.0" y="297" width="388" height="131"/>
-                                </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="uncommonLabel" translatesAutoresizingMaskIntoConstraints="NO" id="HPK-g7-EI8">
-                                    <rect key="frame" x="0.0" y="428" width="388" height="118"/>
-                                </imageView>
-                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="unusualLabel" translatesAutoresizingMaskIntoConstraints="NO" id="CVR-I0-Rgq">
-                                    <rect key="frame" x="0.0" y="546" width="388" height="131"/>
-                                </imageView>
-                            </subviews>
-                        </stackView>
-                    </subviews>
+                <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="0W5-Ae-cQp">
+                    <rect key="frame" x="20" y="216.5" width="374" height="554.5"/>
+                    <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="5ct-YI-2QW">
+                        <size key="itemSize" width="50" height="50"/>
+                        <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                        <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                        <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                    </collectionViewFlowLayout>
+                </collectionView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoZ-LL-t7m">
+                    <rect key="frame" x="20" y="791" width="124" height="51"/>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="WaW-AE-LO8" secondAttribute="trailing" id="0E9-tp-5uy"/>
-                        <constraint firstItem="WaW-AE-LO8" firstAttribute="top" secondItem="sR7-ZG-NYg" secondAttribute="top" id="hsM-F2-eVP"/>
-                        <constraint firstAttribute="bottom" secondItem="WaW-AE-LO8" secondAttribute="bottom" constant="-497.5" id="lXI-Vm-199"/>
-                        <constraint firstItem="WaW-AE-LO8" firstAttribute="leading" secondItem="sWD-qO-zRR" secondAttribute="leading" id="xsl-I0-9Gc"/>
+                        <constraint firstAttribute="width" secondItem="YoZ-LL-t7m" secondAttribute="height" multiplier="363:149" id="DSp-ki-heb"/>
                     </constraints>
-                    <viewLayoutGuide key="contentLayoutGuide" id="nea-yA-hyQ"/>
-                    <viewLayoutGuide key="frameLayoutGuide" id="sWD-qO-zRR"/>
-                </scrollView>
+                    <state key="normal" image="backButton"/>
+                </button>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>
             <constraints>
-                <constraint firstItem="sR7-ZG-NYg" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="6eK-fU-nSR"/>
-                <constraint firstItem="sR7-ZG-NYg" firstAttribute="top" secondItem="iuQ-K4-jYu" secondAttribute="bottom" constant="20" id="AJ4-Jl-OnS"/>
+                <constraint firstItem="YoZ-LL-t7m" firstAttribute="top" secondItem="0W5-Ae-cQp" secondAttribute="bottom" constant="20" id="7Ih-po-xFX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="YoZ-LL-t7m" secondAttribute="bottom" constant="20" id="D25-84-J9y"/>
+                <constraint firstItem="0W5-Ae-cQp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="EPn-B4-TUw"/>
+                <constraint firstItem="YoZ-LL-t7m" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="FSc-hG-6aF"/>
+                <constraint firstItem="YoZ-LL-t7m" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.3" id="HYE-eo-BrS"/>
                 <constraint firstItem="iuQ-K4-jYu" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="VXA-B3-3G6"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sR7-ZG-NYg" secondAttribute="trailing" constant="20" id="aaP-a3-0vZ"/>
                 <constraint firstItem="iuQ-K4-jYu" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.6" id="eWi-pK-5lj"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="sR7-ZG-NYg" secondAttribute="bottom" constant="20" id="gEP-wV-Zj2"/>
+                <constraint firstItem="0W5-Ae-cQp" firstAttribute="top" secondItem="iuQ-K4-jYu" secondAttribute="bottom" constant="20" id="nsS-Xx-2oz"/>
                 <constraint firstItem="iuQ-K4-jYu" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="v1g-13-CXc"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="0W5-Ae-cQp" secondAttribute="trailing" constant="20" id="vt0-Xp-Fs8"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="137.68115942028987" y="120.53571428571428"/>
         </view>
     </objects>
     <resources>
-        <image name="commonLabel" width="338" height="131"/>
+        <image name="backButton" width="363" height="149"/>
         <image name="inventoryButton" width="462" height="173"/>
-        <image name="trashLabel" width="360" height="129"/>
-        <image name="uncommonLabel" width="388" height="118"/>
-        <image name="unusualLabel" width="369" height="131"/>
-        <image name="vCommonLabel" width="319" height="168"/>
     </resources>
 </document>

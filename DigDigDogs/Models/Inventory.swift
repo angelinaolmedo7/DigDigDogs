@@ -7,15 +7,7 @@
 //
 
 import Foundation
-
-let currencyNames : [String] = ["coins"]
-let trashItemNames : [String] = ["bottle cap", "wrapper", "can"]
-let vCommonItemNames : [String] = ["twine", "screw", "bone"]
-let commonItemNames : [String] = ["black fur", "gray fur", "white fur", "yellow fur", "brown fur"]
-let uncommonItemNames : [String] = ["dog tag", "collar", "leash"]
-let unusualItemNames : [String] = ["blanket", "bow", "dog treat"]
-let rareItemNames : [String] = ["ribbon", "teddy bear"]
-let vRareItemNames : [String] = ["fossil plant", "fossil dino", "fossil fish"]
+import UIKit
 
 class Inventory {
     var currency: [Item]
@@ -26,6 +18,16 @@ class Inventory {
     var unusualItems: [Item]
     var rareItems: [Item]
     var vRareItems: [Item]
+    
+    let headerImages: [UIImage] = [
+        UIImage(named: "trashLabel")!,
+        UIImage(named: "vCommonLabel")!,
+        UIImage(named: "commonLabel")!,
+        UIImage(named: "uncommonLabel")!,
+        UIImage(named: "unusualLabel")!,
+        UIImage(named: "rareLabel")!,
+        UIImage(named: "vRareLabel")!
+    ]
     
     init() {
         //set up empty inventory

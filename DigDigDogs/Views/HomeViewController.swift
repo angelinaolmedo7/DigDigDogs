@@ -35,8 +35,9 @@ class HomeViewController: UIViewController {
 
     @IBAction func inventoryButtonSelected(_ sender: Any) {
         var invController = InventoryViewController()
-        self.view.window!.rootViewController = invController
-//        self.present(invController, animated: true, completion: nil)
+        invController.user = self.user
+//        self.view.window!.rootViewController = invController
+        self.present(invController, animated: true, completion: nil)
         
     }
     @IBAction func dogsButtonSelected(_ sender: Any) {

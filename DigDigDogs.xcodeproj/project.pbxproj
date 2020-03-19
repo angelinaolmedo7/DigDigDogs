@@ -26,6 +26,10 @@
 		295E927D2422146F0052C890 /* UIViewControllerExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E927C2422146F0052C890 /* UIViewControllerExtensions.swift */; };
 		295E927F242232950052C890 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E927E242232950052C890 /* Item.swift */; };
 		295E9281242233A50052C890 /* Inventory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9280242233A50052C890 /* Inventory.swift */; };
+		295E9284242325CF0052C890 /* InventoryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9282242325CF0052C890 /* InventoryCollectionViewController.swift */; };
+		295E9285242325CF0052C890 /* InventoryCollectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E9283242325CF0052C890 /* InventoryCollectionViewController.xib */; };
+		295E9288242328EA0052C890 /* InventoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9286242328EA0052C890 /* InventoryCollectionViewCell.swift */; };
+		295E9289242328EA0052C890 /* InventoryCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +54,10 @@
 		295E927C2422146F0052C890 /* UIViewControllerExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtensions.swift; sourceTree = "<group>"; };
 		295E927E242232950052C890 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Item.swift; sourceTree = "<group>"; };
 		295E9280242233A50052C890 /* Inventory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inventory.swift; sourceTree = "<group>"; };
+		295E9282242325CF0052C890 /* InventoryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionViewController.swift; sourceTree = "<group>"; };
+		295E9283242325CF0052C890 /* InventoryCollectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryCollectionViewController.xib; sourceTree = "<group>"; };
+		295E9286242328EA0052C890 /* InventoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InventoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = InventoryCollectionViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +123,10 @@
 				295E927424220E990052C890 /* DogSelectionTableViewCell.xib */,
 				295E9277242211790052C890 /* DogSelectionTableViewController.swift */,
 				295E9278242211790052C890 /* DogSelectionTableViewController.xib */,
+				295E9282242325CF0052C890 /* InventoryCollectionViewController.swift */,
+				295E9286242328EA0052C890 /* InventoryCollectionViewCell.swift */,
+				295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */,
+				295E9283242325CF0052C890 /* InventoryCollectionViewController.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -199,10 +211,12 @@
 				295E925A242193F10052C890 /* LaunchScreen.storyboard in Resources */,
 				295E9257242193F10052C890 /* Preview Assets.xcassets in Resources */,
 				295E92692421A1170052C890 /* HomeViewController.xib in Resources */,
+				295E9289242328EA0052C890 /* InventoryCollectionViewCell.xib in Resources */,
 				295E927624220E9A0052C890 /* DogSelectionTableViewCell.xib in Resources */,
 				295E927A242211790052C890 /* DogSelectionTableViewController.xib in Resources */,
 				295E926E2421A64A0052C890 /* InventoryViewController.xib in Resources */,
 				295E9254242193F10052C890 /* Assets.xcassets in Resources */,
+				295E9285242325CF0052C890 /* InventoryCollectionViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +234,8 @@
 				295E92702421CBC60052C890 /* Dog.swift in Sources */,
 				295E926D2421A64A0052C890 /* InventoryViewController.swift in Sources */,
 				295E9250242193ED0052C890 /* SceneDelegate.swift in Sources */,
+				295E9288242328EA0052C890 /* InventoryCollectionViewCell.swift in Sources */,
+				295E9284242325CF0052C890 /* InventoryCollectionViewController.swift in Sources */,
 				295E927F242232950052C890 /* Item.swift in Sources */,
 				295E927524220E9A0052C890 /* DogSelectionTableViewCell.swift in Sources */,
 				295E9279242211790052C890 /* DogSelectionTableViewController.swift in Sources */,
