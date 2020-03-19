@@ -33,10 +33,15 @@ class DogSelectionTableViewCell: UITableViewCell {
     }
     
     func setInfo (dog: Dog) {
-        dogImage.image = dog.image
+        if dog.unlocked {
+            dogImage.image = dog.image
+        }
+        else {
+            dogImage.image = .checkmark
+        }
         dogBreedLabel.text = dog.breed
         nameLabel.text = dog.dogName
-        dpLabel.text = "\(String(describing: dog.dp))"
+        dpLabel.text = String(dog.dp)
     }
     
 }

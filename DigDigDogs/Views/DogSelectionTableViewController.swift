@@ -11,6 +11,27 @@ import UIKit
 class DogSelectionTableViewController: UITableViewController {
     
     var user: User!
+    
+    var selectedPaths: [IndexPath?]? = [] {
+        didSet {
+            var indexPaths: [IndexPath] = []
+            for selectedIndexPath in selectedPaths! {
+                if let selectedIndexPath = selectedIndexPath {
+                    indexPaths.append(selectedIndexPath)
+                }
+            }
+            if let oldValue = oldValue {
+                for deselectedPath in oldValue {
+                    if !indexPaths.contains(deselectedPath!){
+                        indexPaths.append(deselectedPath!)
+                    }
+                }
+            }
+            tableView.performBatchUpdates({
+                self.tableView.reloadRows(at: indexPaths, with: .none)
+            })
+        }
+    }
         
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,6 +57,15 @@ class DogSelectionTableViewController: UITableViewController {
                heightForRowAt indexPath: IndexPath) -> CGFloat {
 
         return (100)
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        user.myDogs[indexPath.row].unlocked = true
+        if selectedPaths!.contains(indexPath) {
+            selectedPaths!.remove(at: selectedPaths!.firstIndex(of: indexPath)!)
+        } else {
+            selectedPaths!.append(indexPath)
+        }
     }
 
     /*
