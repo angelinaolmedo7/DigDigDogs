@@ -39,6 +39,10 @@ class DogSelectionTableViewController: UITableViewController {
                     DogSelectionTableViewCell.nib,
                     forCellReuseIdentifier: DogSelectionTableViewCell.identifier
         )
+        tableView.register(
+                    LockedDogTableViewCell.nib,
+                    forCellReuseIdentifier: LockedDogTableViewCell.identifier
+        )
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -46,11 +50,19 @@ class DogSelectionTableViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: DogSelectionTableViewCell.identifier, for: indexPath) as! DogSelectionTableViewCell
-        let dog = user.myDogs[indexPath.row]
-        cell.setInfo(dog: dog)
         
-        return cell
+        let dog = user.myDogs[indexPath.row]
+        if dog.unlocked {
+            let cell = tableView.dequeueReusableCell(withIdentifier: DogSelectionTableViewCell.identifier, for: indexPath) as! DogSelectionTableViewCell
+            cell.setInfo(dog: dog)
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: LockedDogTableViewCell.identifier, for: indexPath) as! LockedDogTableViewCell
+            cell.setInfo(dog: dog)
+            return cell
+        }
+        
     }
     
     override func tableView(_ tableView: UITableView,
