@@ -17,8 +17,14 @@ class DogSelectionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        dogTableViewController = DogSelectionTableViewController()
-        dogTableViewController.user = user
+//        dogTableViewController = DogSelectionTableViewController()
+//        dogTableViewController.user = user
+        
+//        view.bringSubviewToFront(dogTableViewController.tableView)
+        
+//        tableView.dataSource = dogTableViewController
+//        tableView.delegate = dogTableViewController
+        
         
         tableView.register(
                     DogSelectionTableViewCell.nib,
@@ -29,7 +35,8 @@ class DogSelectionViewController: UIViewController {
                     forCellReuseIdentifier: LockedDogTableViewCell.identifier
         )
         
-        tableView.dataSource = dogTableViewController
+        tableView.dataSource = self
+        tableView.delegate = self
         // Do any additional setup after loading the view.
     }
 
@@ -44,4 +51,42 @@ class DogSelectionViewController: UIViewController {
     }
     */
 
+}
+
+extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate {
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return user.myDogs.count
+    }
+
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let dog = user.myDogs[indexPath.row]
+        if dog.unlocked {
+            let cell = tableView.dequeueReusableCell(withIdentifier: DogSelectionTableViewCell.identifier, for: indexPath) as! DogSelectionTableViewCell
+            cell.setInfo(dog: dog)
+            return cell
+        }
+        else {
+            let cell = tableView.dequeueReusableCell(withIdentifier: LockedDogTableViewCell.identifier, for: indexPath) as! LockedDogTableViewCell
+            cell.setInfo(dog: dog)
+            return cell
+        }
+        
+    }
+    
+    func tableView(_ tableView: UITableView,
+               heightForRowAt indexPath: IndexPath) -> CGFloat {
+
+        return (100)
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selection2")
+        user.myDogs[indexPath.row].unlocked = true
+        tableView.performBatchUpdates({
+            self.tableView.reloadRows(at: [indexPath], with: .none)
+        })
+    }
+    
 }

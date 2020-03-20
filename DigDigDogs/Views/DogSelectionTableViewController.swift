@@ -72,6 +72,7 @@ class DogSelectionTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("selection")
         user.myDogs[indexPath.row].unlocked = true
         if selectedPaths!.contains(indexPath) {
             selectedPaths!.remove(at: selectedPaths!.firstIndex(of: indexPath)!)
