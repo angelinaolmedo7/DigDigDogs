@@ -11,9 +11,15 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var user: User!
+    
     @IBOutlet weak var dogOneButton: UIButton!
     @IBOutlet weak var dogTwoButton: UIButton!
     @IBOutlet weak var dogThreeButton: UIButton!
+    
+    @IBOutlet weak var dogOneStackView: UIStackView!
+    @IBOutlet weak var dogOneItemImage: UIImageView!
+    @IBOutlet weak var dogOneItemLabel: UILabel!
+    
     var buttons: [UIButton]!
     
     override func viewDidLoad() {
@@ -53,15 +59,31 @@ class HomeViewController: UIViewController {
     }
 
     @IBAction func inventoryButtonSelected(_ sender: Any) {
-        var invController = InventoryViewController()
+        let invController = InventoryViewController()
         invController.user = self.user
 //        self.view.window!.rootViewController = invController
         self.present(invController, animated: true, completion: nil)
         
     }
     @IBAction func dogsButtonSelected(_ sender: Any) {
-        var dogController = DogSelectionViewController()
+        let dogController = DogSelectionViewController()
         dogController.user = self.user
         self.present(dogController, animated: true, completion: nil)
+    }
+    
+    @IBAction func dogOnePressed(_ sender: Any) {
+        UIView.animate(withDuration: 0.2, animations: {
+            self.dogOneStackView.arrangedSubviews[0].isHidden = false
+            self.dogOneStackView.arrangedSubviews[1].isHidden = false
+        }) { (completed) in
+            UIView.animate(withDuration: 0.2, delay: 0.2, options: [], animations: {
+                self.dogOneStackView.arrangedSubviews[0].isHidden = true
+                self.dogOneStackView.arrangedSubviews[1].isHidden = true
+            }, completion: nil)
+        }
+    }
+    @IBAction func dogTwoPressed(_ sender: Any) {
+    }
+    @IBAction func dogThreePressed(_ sender: Any) {
     }
 }
