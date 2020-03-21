@@ -14,9 +14,11 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dogOneButton: UIButton!
     @IBOutlet weak var dogTwoButton: UIButton!
     @IBOutlet weak var dogThreeButton: UIButton!
+    var buttons: [UIButton]!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buttons = [dogOneButton, dogTwoButton, dogThreeButton]
         setUpBackground() // add background view. For now default grass.
         if user == nil {
             user = User()  // init new user object if does not already exist. This includes an inventory object and list of dogs.
@@ -38,7 +40,15 @@ class HomeViewController: UIViewController {
     }
     
     func setUpDogs() {
-        
+        for ind in (0..<user.activeDogs.count) {
+            buttons[ind].setImage(user.myDogs[user.activeDogs[ind]].image, for: .normal)
+            buttons[ind].isHidden = false
+        }
+        if user.activeDogs.count < 3 {
+            for ind in (user.activeDogs.count..<3){
+                buttons[ind].isHidden = true
+            }
+        }
     }
 
     @IBAction func inventoryButtonSelected(_ sender: Any) {
