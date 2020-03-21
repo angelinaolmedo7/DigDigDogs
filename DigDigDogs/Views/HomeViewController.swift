@@ -42,6 +42,7 @@ class HomeViewController: UIViewController {
     func setUpDogs() {
         for ind in (0..<user.activeDogs.count) {
             buttons[ind].setImage(user.myDogs[user.activeDogs[ind]].image, for: .normal)
+            buttons[ind].heightAnchor.constraint(equalTo: buttons[ind].widthAnchor, multiplier: user.myDogs[user.activeDogs[ind]].image.size.height/user.myDogs[user.activeDogs[ind]].image.size.width).isActive = true
             buttons[ind].isHidden = false
         }
         if user.activeDogs.count < 3 {
