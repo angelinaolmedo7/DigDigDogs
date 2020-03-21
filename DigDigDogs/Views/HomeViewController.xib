@@ -9,6 +9,9 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeViewController" customModule="DigDigDogs" customModuleProvider="target">
             <connections>
+                <outlet property="dogOneButton" destination="M4H-xI-hIy" id="xmJ-Sy-2Rv"/>
+                <outlet property="dogThreeButton" destination="wli-IM-nGb" id="obf-Fm-Snv"/>
+                <outlet property="dogTwoButton" destination="GUV-y6-ZZV" id="HiE-PG-Vkk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -28,7 +31,7 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yDW-F0-FCH" userLabel="dogsButton">
-                    <rect key="frame" x="20" y="146" width="99.5" height="49"/>
+                    <rect key="frame" x="20" y="146" width="107.5" height="53.5"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="yDW-F0-FCH" secondAttribute="height" multiplier="107:53" id="3c3-Pl-f9m"/>
                     </constraints>
@@ -37,14 +40,44 @@
                         <action selector="dogsButtonSelected:" destination="-1" eventType="touchUpInside" id="R1E-ME-9Kp"/>
                     </connections>
                 </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4H-xI-hIy" userLabel="dogOneButton">
+                    <rect key="frame" x="218.5" y="229.5" width="165.5" height="128.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="M4H-xI-hIy" secondAttribute="height" multiplier="542:421" id="zoG-6V-Yb6"/>
+                    </constraints>
+                    <state key="normal" image="mutt"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUV-y6-ZZV" userLabel="dogTwoButton">
+                    <rect key="frame" x="30" y="388" width="165.5" height="138.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="GUV-y6-ZZV" secondAttribute="height" multiplier="475:398" id="VeB-QL-Jhm"/>
+                    </constraints>
+                    <state key="normal" image="pug"/>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wli-IM-nGb" userLabel="dogThreeButton">
+                    <rect key="frame" x="218.5" y="556.5" width="165.5" height="134"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="wli-IM-nGb" secondAttribute="height" multiplier="493:398" id="4TL-T7-HSC"/>
+                    </constraints>
+                    <state key="normal" image="borderCollie"/>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="GUV-y6-ZZV" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="1UV-qv-Dl3"/>
+                <constraint firstAttribute="trailing" secondItem="wli-IM-nGb" secondAttribute="trailing" constant="30" id="5HM-fh-nCx"/>
+                <constraint firstItem="wli-IM-nGb" firstAttribute="top" secondItem="GUV-y6-ZZV" secondAttribute="bottom" constant="30" id="7Es-eO-4vy"/>
+                <constraint firstItem="M4H-xI-hIy" firstAttribute="top" secondItem="yDW-F0-FCH" secondAttribute="bottom" constant="30" id="JkB-bP-Bwj"/>
                 <constraint firstItem="yDW-F0-FCH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LLq-YE-3UH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M4H-xI-hIy" secondAttribute="trailing" constant="30" id="QDv-Hg-Itr"/>
                 <constraint firstItem="yDW-F0-FCH" firstAttribute="top" secondItem="yRG-7M-yZI" secondAttribute="bottom" constant="20" id="SZi-BN-EmA"/>
-                <constraint firstItem="yDW-F0-FCH" firstAttribute="width" secondItem="yRG-7M-yZI" secondAttribute="width" multiplier="0.6" id="ZUs-2f-YZn"/>
+                <constraint firstItem="GUV-y6-ZZV" firstAttribute="top" secondItem="M4H-xI-hIy" secondAttribute="bottom" constant="30" id="WQr-9u-nkb"/>
+                <constraint firstItem="yDW-F0-FCH" firstAttribute="width" secondItem="yRG-7M-yZI" secondAttribute="width" multiplier="0.65" id="ZUs-2f-YZn"/>
+                <constraint firstItem="GUV-y6-ZZV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Zvn-Ab-Vc1"/>
                 <constraint firstItem="yRG-7M-yZI" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="bgX-0y-DVc"/>
+                <constraint firstItem="wli-IM-nGb" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="e9m-1C-aEB"/>
                 <constraint firstItem="yRG-7M-yZI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fuV-Zx-g6g"/>
+                <constraint firstItem="M4H-xI-hIy" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="gn4-qj-eWp"/>
                 <constraint firstItem="yRG-7M-yZI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rag-ZH-6FK"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
@@ -52,7 +85,10 @@
         </view>
     </objects>
     <resources>
+        <image name="borderCollie" width="493" height="398"/>
         <image name="dogsButton" width="321" height="159"/>
         <image name="inventoryButton" width="462" height="173"/>
+        <image name="mutt" width="493" height="421"/>
+        <image name="pug" width="475" height="398"/>
     </resources>
 </document>

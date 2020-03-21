@@ -11,13 +11,17 @@ import UIKit
 class HomeViewController: UIViewController {
     
     var user: User!
-
+    @IBOutlet weak var dogOneButton: UIButton!
+    @IBOutlet weak var dogTwoButton: UIButton!
+    @IBOutlet weak var dogThreeButton: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpBackground() // add background view. For now default grass.
         if user == nil {
             user = User()  // init new user object if does not already exist. This includes an inventory object and list of dogs.
         }
+        setUpDogs()
     }
     
     func setUpBackground(imageName: String = "bg-grass"){
@@ -31,6 +35,10 @@ class HomeViewController: UIViewController {
         background.trailingAnchor.constraint(equalTo: view.trailingAnchor).isActive = true
         background.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         background.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+    }
+    
+    func setUpDogs() {
+        
     }
 
     @IBAction func inventoryButtonSelected(_ sender: Any) {
