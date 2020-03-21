@@ -22,6 +22,10 @@ class InventoryViewController: UIViewController {
 }
 
 extension InventoryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return user.inventory.getAllItems().count
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         return user.inventory.getAllItems()[section].count

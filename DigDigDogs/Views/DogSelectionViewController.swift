@@ -82,7 +82,6 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("selection2")
         user.myDogs[indexPath.row].unlocked = true
         tableView.performBatchUpdates({
             self.tableView.reloadRows(at: [indexPath], with: .none)

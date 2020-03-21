@@ -26,7 +26,7 @@ class InventoryCollectionViewCell: UICollectionViewCell {
     
     func setInfo (item: Item) {
         itemImage.image = item.image
-        itemCountLabel.text = "\(item.quantity)"
+        itemCountLabel.text = "\(item.quantity!)"
     }
 
 }
