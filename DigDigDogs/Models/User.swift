@@ -19,7 +19,7 @@ class User {
     
     init() {
         myDogs = [dogsDict["mutt"]!, dogsDict["pug"]!, dogsDict["bc"]!, dogsDict["aussie"]!, dogsDict["cat"]!]
-        activeDogs = [0]  // start with only mutt active
+        activeDogs = [0,3,4]  // start with only mutt active
         unlockedDogs = [0]  // mutt is default unlocked
         lockedDogs = [1,2,3,4]  // rest are locked.
         

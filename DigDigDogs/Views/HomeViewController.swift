@@ -20,6 +20,15 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dogOneItemImage: UIImageView!
     @IBOutlet weak var dogOneItemLabel: UILabel!
     
+    @IBOutlet weak var dogTwoStackView: UIStackView!
+    @IBOutlet weak var dogTwoItemImage: UIImageView!
+    @IBOutlet weak var dogTwoItemLabel: UILabel!
+    
+    @IBOutlet weak var dogThreeStackView: UIStackView!
+    @IBOutlet weak var dogThreeItemImage: UIImageView!
+    @IBOutlet weak var dogThreeItemLabel: UILabel!
+    
+    
     var buttons: [UIButton]!
     
     override func viewDidLoad() {
@@ -72,18 +81,24 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func dogOnePressed(_ sender: Any) {
-        UIView.animate(withDuration: 0.2, animations: {
-            self.dogOneStackView.arrangedSubviews[0].isHidden = false
-            self.dogOneStackView.arrangedSubviews[1].isHidden = false
-        }) { (completed) in
-            UIView.animate(withDuration: 0.2, delay: 0.2, options: [], animations: {
-                self.dogOneStackView.arrangedSubviews[0].isHidden = true
-                self.dogOneStackView.arrangedSubviews[1].isHidden = true
-            }, completion: nil)
-        }
+        popInOut(stack: dogOneStackView)
     }
     @IBAction func dogTwoPressed(_ sender: Any) {
+        popInOut(stack: dogTwoStackView)
     }
     @IBAction func dogThreePressed(_ sender: Any) {
+        popInOut(stack: dogThreeStackView)
+    }
+    
+    func popInOut(stack: UIStackView!) {
+        UIView.animate(withDuration: 0.2, animations: {
+            stack.arrangedSubviews[0].isHidden = false
+            stack.arrangedSubviews[1].isHidden = false
+        }) { (completed) in
+            UIView.animate(withDuration: 0.2, delay: 0.2, options: [], animations: {
+                stack.arrangedSubviews[0].isHidden = true
+                stack.arrangedSubviews[1].isHidden = true
+            }, completion: nil)
+        }
     }
 }
