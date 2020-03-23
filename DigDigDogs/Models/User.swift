@@ -34,7 +34,7 @@ class User {
             return (defaultItem.name, defaultItem.image)
         }
         // Determine item
-        print(itemRoll.dp)
+//        print(itemRoll.dp)
         var newItem: (itmName:(String, UIImage), quantity:Int) = ((defaultItem.name, defaultItem.image), 1)  // name should be overwritten
         if itemRoll.roll <= 30 {  // 30% coins
             newItem.itmName = inventory.addItemInCategory(rarity: .currency, quantity: calcCoins(exponent(base: 2, exp: itemRoll.dp)))

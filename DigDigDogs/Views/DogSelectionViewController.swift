@@ -82,7 +82,16 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        user.myDogs[indexPath.row].unlocked = true
+        if user.myDogs[indexPath.row].unlocked == false {
+            user.myDogs[indexPath.row].unlocked = true
+        }
+        else {
+            if user.activeDogs.count >= 3 {
+                user.activeDogs.remove(at: 0)
+            }
+            user.activeDogs.append(indexPath.row)
+            (self.presentingViewController as! HomeViewController).setUpDogs()
+        }
         tableView.performBatchUpdates({
             self.tableView.reloadRows(at: [indexPath], with: .none)
         })
