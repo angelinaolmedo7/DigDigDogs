@@ -81,16 +81,18 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func dogOnePressed(_ sender: Any) {
-        popInOut(stack: dogOneStackView)
+        popInOut(stack: dogOneStackView, dog: user.myDogs[user.activeDogs[0]])
     }
     @IBAction func dogTwoPressed(_ sender: Any) {
-        popInOut(stack: dogTwoStackView)
+        popInOut(stack: dogTwoStackView, dog: user.myDogs[user.activeDogs[1]])
     }
     @IBAction func dogThreePressed(_ sender: Any) {
-        popInOut(stack: dogThreeStackView)
+        popInOut(stack: dogThreeStackView, dog: user.myDogs[user.activeDogs[2]])
     }
     
-    func popInOut(stack: UIStackView!) {
+func popInOut(stack: UIStackView!, dog: Dog!) {
+    let itemString = self.user.handleItemRoll(dog.generateResource())
+    (stack.arrangedSubviews[1] as! UILabel).text = itemString
         UIView.animate(withDuration: 0.2, animations: {
             stack.arrangedSubviews[0].isHidden = false
             stack.arrangedSubviews[1].isHidden = false

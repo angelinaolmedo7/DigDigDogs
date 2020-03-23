@@ -25,4 +25,123 @@ class User {
         
         inventory = Inventory()
     }
+    
+    func handleItemRoll (_ itemRoll: (dp: Int, roll: Int)) -> String {
+        // Make sure inv exists
+        guard self.inventory != nil else {
+            return "ERROR"
+        }
+        // Determine item
+        print(itemRoll.dp)
+        var newItem: (itmName:String, quantity:Int) = ("ERROR", 1)  // name should be overwritten
+        if itemRoll.roll <= 30 {  // 30% coins
+            newItem = ("Coins", calcCoins(exponent(base: 2, exp: itemRoll.dp)))
+        }
+        else {
+            if itemRoll.dp == 1 {
+                if itemRoll.roll <= 60 {  // 30% trash
+                    newItem.itmName = inventory.addItemInCategory(rarity: .trash, quantity: 1)
+                }
+                else if itemRoll.roll <= 88 {  // 28% very common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .vcommon, quantity: 1)
+                }
+                else if itemRoll.roll <= 97 { // 9% common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .common, quantity: 1)
+                }
+                else if itemRoll.roll <= 99  { // 2% uncommon
+                    newItem.itmName = inventory.addItemInCategory(rarity: .uncommon, quantity: 1)
+                }
+                else { // 1% unusual
+                    newItem.itmName = inventory.addItemInCategory(rarity: .unusual, quantity: 1)
+                }
+            }
+            else if itemRoll.dp == 2 {
+                if itemRoll.roll <= 45 {  // trash
+                    newItem.itmName = inventory.addItemInCategory(rarity: .trash, quantity: 1)
+                }
+                else if itemRoll.roll <= 55 {  // very common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .vcommon, quantity: 1)
+                }
+                else if itemRoll.roll <= 70 {  // common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .common, quantity: 1)
+                }
+                else if itemRoll.roll <= 85  {  // uncommon
+                    newItem.itmName = inventory.addItemInCategory(rarity: .uncommon, quantity: 1)
+                }
+                else if itemRoll.roll <= 95  {  // unusual
+                    newItem.itmName = inventory.addItemInCategory(rarity: .unusual, quantity: 1)
+                }
+                else {  // rare
+                    newItem.itmName = inventory.addItemInCategory(rarity: .rare, quantity: 1)
+                }
+            }
+            else if itemRoll.dp == 3 {
+                if itemRoll.roll <= 35 {  // trash
+                    newItem.itmName = inventory.addItemInCategory(rarity: .trash, quantity: 1)
+                }
+                else if itemRoll.roll <= 40 {  // very common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .vcommon, quantity: 1)
+                }
+                else if itemRoll.roll <= 50 {  // common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .common, quantity: 1)
+                }
+                else if itemRoll.roll <= 65  {  // uncommon
+                    newItem.itmName = inventory.addItemInCategory(rarity: .uncommon, quantity: 1)
+                }
+                else if itemRoll.roll <= 85  {  // unusual
+                    newItem.itmName = inventory.addItemInCategory(rarity: .unusual, quantity: 1)
+                }
+                else if itemRoll.roll <= 95  {  // rare
+                    newItem.itmName = inventory.addItemInCategory(rarity: .rare, quantity: 1)
+                }
+                else {  // very rare
+                    newItem.itmName = inventory.addItemInCategory(rarity: .vrare, quantity: 1)
+                }
+            }
+            else if itemRoll.dp == 4 {
+                if itemRoll.roll <= 35 {  // trash
+                    newItem.itmName = inventory.addItemInCategory(rarity: .trash, quantity: 1)
+                }
+                else if itemRoll.roll <= 36 {  // very common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .vcommon, quantity: 1)
+                }
+                else if itemRoll.roll <= 40 {  // common
+                    newItem.itmName = inventory.addItemInCategory(rarity: .common, quantity: 1)
+                }
+                else if itemRoll.roll <= 50  {  // uncommon
+                    newItem.itmName = inventory.addItemInCategory(rarity: .uncommon, quantity: 1)
+                }
+                else if itemRoll.roll <= 73  {  // unusual
+                    newItem.itmName = inventory.addItemInCategory(rarity: .unusual, quantity: 1)
+                }
+                else if itemRoll.roll <= 90  {  // rare
+                    newItem.itmName = inventory.addItemInCategory(rarity: .rare, quantity: 1)
+                }
+                else {  // very rare
+                    newItem.itmName = inventory.addItemInCategory(rarity: .vrare, quantity: 1)
+                }
+            }
+            else {  // this... shouldn't happen.
+                newItem = ("ERROR", 0)
+            }
+        }
+        
+        // Add quantity of item to proper dict value
+        return "+\(newItem.quantity) \(newItem.itmName)"
+    }
+    
+    func calcCoins (_ multiplyer: Int) -> Int {
+        return Int.random(in: 1...20)*multiplyer
+    }
+    
+    func exponent(base: Int, exp: Int) -> Int {
+        if exp == 0 {
+            return 1
+        }
+        var result: Int = 1
+        for _ in 1 ... exp {
+            result *= base
+        }
+        return result
+    }
 }
