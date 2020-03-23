@@ -80,48 +80,50 @@ class Inventory {
         return allItems
     }
     
-    func addItemInCategory(rarity: Item.Rarity, quantity: Int) -> String {
+    func addItemInCategory(rarity: Item.Rarity, quantity: Int) -> (String, UIImage) {
         if rarity == .currency {
             self.currency[0].quantity += quantity
-            return "coins"
+            return (currency[0].name, currency[0].image)
         }
         else if rarity == .trash {
             let roll = Int.random(in: 0..<self.trashItems.count)
             self.trashItems[roll].quantity += quantity
-            return trashItems[roll].name
+            return (trashItems[roll].name, trashItems[roll].image)
         }
         else if rarity == .vcommon {
             let roll = Int.random(in: 0..<self.vCommonItems.count)
             self.vCommonItems[roll].quantity += quantity
-            return vCommonItems[roll].name
+            return (vCommonItems[roll].name, vCommonItems[roll].image)
         }
         else if rarity == .common {
             let roll = Int.random(in: 0..<self.commonItems.count)
             self.commonItems[roll].quantity += quantity
-            return commonItems[roll].name
+            return (commonItems[roll].name, commonItems[roll].image)
         }
         else if rarity == .uncommon {
             let roll = Int.random(in: 0..<self.uncommonItems.count)
             self.uncommonItems[roll].quantity += quantity
-            return uncommonItems[roll].name
+            return (uncommonItems[roll].name, uncommonItems[roll].image)
         }
         else if rarity == .unusual {
             let roll = Int.random(in: 0..<self.unusualItems.count)
             self.unusualItems[roll].quantity += quantity
-            return unusualItems[roll].name
+            return (unusualItems[roll].name, unusualItems[roll].image)
         }
         else if rarity == .rare {
             let roll = Int.random(in: 0..<self.rareItems.count)
             self.rareItems[roll].quantity += quantity
-            return rareItems[roll].name
+            return (rareItems[roll].name, rareItems[roll].image)
         }
         else if rarity == .vrare {
             let roll = Int.random(in: 0..<self.vRareItems.count)
             self.vRareItems[roll].quantity += quantity
-            return vRareItems[roll].name
+            return (vRareItems[roll].name, vRareItems[roll].image)
         }
         else {
-            return "ERROR"
+            return (defaultItem.name, defaultItem.image)
         }
     }
 }
+
+let defaultItem = Item(name: "ERROR", rarity: .trash, imageName: "bone")

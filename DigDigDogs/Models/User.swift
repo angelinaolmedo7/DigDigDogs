@@ -7,6 +7,8 @@
 //
 
 import Foundation
+import UIKit
+
 class User {
     var myDogs: [Dog]
     
@@ -26,16 +28,16 @@ class User {
         inventory = Inventory()
     }
     
-    func handleItemRoll (_ itemRoll: (dp: Int, roll: Int)) -> String {
+    func handleItemRoll (_ itemRoll: (dp: Int, roll: Int)) -> (String, UIImage) {
         // Make sure inv exists
         guard self.inventory != nil else {
-            return "ERROR"
+            return (defaultItem.name, defaultItem.image)
         }
         // Determine item
         print(itemRoll.dp)
-        var newItem: (itmName:String, quantity:Int) = ("ERROR", 1)  // name should be overwritten
+        var newItem: (itmName:(String, UIImage), quantity:Int) = ((defaultItem.name, defaultItem.image), 1)  // name should be overwritten
         if itemRoll.roll <= 30 {  // 30% coins
-            newItem = ("Coins", calcCoins(exponent(base: 2, exp: itemRoll.dp)))
+            newItem.itmName = inventory.addItemInCategory(rarity: .currency, quantity: calcCoins(exponent(base: 2, exp: itemRoll.dp)))
         }
         else {
             if itemRoll.dp == 1 {
@@ -122,12 +124,12 @@ class User {
                 }
             }
             else {  // this... shouldn't happen.
-                newItem = ("ERROR", 0)
+                newItem = ((defaultItem.name, defaultItem.image), 0)
             }
         }
         
         // Add quantity of item to proper dict value
-        return "+\(newItem.quantity) \(newItem.itmName)"
+        return ("+\(newItem.quantity) \(newItem.itmName.0)", newItem.itmName.1)
     }
     
     func calcCoins (_ multiplyer: Int) -> Int {
