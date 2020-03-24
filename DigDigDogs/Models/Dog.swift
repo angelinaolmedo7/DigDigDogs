@@ -9,10 +9,10 @@
 import Foundation
 import UIKit
 
-class Dog {
+class Dog: Codable {
     var breed: String!
     var dogName: String!
-    var image: UIImage!
+    var image: String!
     var dp: Int!
     var unlocked: Bool!
     var hiddenInCrafting: Bool!
@@ -21,7 +21,7 @@ class Dog {
     init(breed: String, name: String, imageName: String, dp: Int = 0, unlocked: Bool = false, hidden: Bool = false) {
         self.breed = breed
         self.dogName = name
-        self.image = UIImage(named: imageName)
+        self.image = imageName
         self.dp = dp
         self.unlocked = unlocked
         self.hiddenInCrafting = hidden

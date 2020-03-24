@@ -34,10 +34,10 @@ class DogSelectionTableViewCell: UITableViewCell {
     
     func setInfo (dog: Dog) {
         if dog.unlocked {
-            dogImage.image = dog.image
+            dogImage.image = UIImage(named: dog.image)
         }
         else {
-            dogImage.image = .checkmark
+            dogImage.image = .checkmark  // shouldn't happen
         }
         dogBreedLabel.text = dog.breed
         nameLabel.text = dog.dogName

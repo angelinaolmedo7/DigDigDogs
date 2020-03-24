@@ -28,7 +28,6 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dogThreeItemImage: UIImageView!
     @IBOutlet weak var dogThreeItemLabel: UILabel!
     
-    
     var buttons: [UIButton]!
     
     override func viewDidLoad() {
@@ -56,8 +55,9 @@ class HomeViewController: UIViewController {
     
     func setUpDogs() {
         for ind in (0..<user.activeDogs.count) {
-            buttons[ind].setImage(user.myDogs[user.activeDogs[ind]].image, for: .normal)
-            buttons[ind].heightAnchor.constraint(equalTo: buttons[ind].widthAnchor, multiplier: user.myDogs[user.activeDogs[ind]].image.size.height/user.myDogs[user.activeDogs[ind]].image.size.width).isActive = true
+            let dogImage: UIImage! = UIImage(named: user.myDogs[user.activeDogs[ind]].image)
+            buttons[ind].setImage(dogImage, for: .normal)
+            buttons[ind].heightAnchor.constraint(equalTo: buttons[ind].widthAnchor, multiplier: dogImage.size.height/dogImage.size.width).isActive = true
             buttons[ind].isHidden = false
         }
         if user.activeDogs.count < 3 {

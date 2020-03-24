@@ -86,6 +86,7 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
             user.myDogs[indexPath.row].unlocked = true
         }
         else {
+//            (self.presentingViewController as! HomeViewController).deactivateConstraints()
             if user.activeDogs.count >= 3 {
                 user.activeDogs.remove(at: 0)
             }
