@@ -93,7 +93,7 @@ class HomeViewController: UIViewController {
 func popInOut(stack: UIStackView!, dog: Dog!) {
     let itemString = self.user.handleItemRoll(dog.generateResource())
     (stack.arrangedSubviews[1] as! UILabel).text = itemString.0
-    (stack.arrangedSubviews[0] as! UIImageView).image = itemString.1
+    (stack.arrangedSubviews[0] as! UIImageView).image = UIImage(named: itemString.1)!
         UIView.animate(withDuration: 0.2, animations: {
             stack.arrangedSubviews[0].isHidden = false
             stack.arrangedSubviews[1].isHidden = false

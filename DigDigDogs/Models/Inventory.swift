@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class Inventory {
+class Inventory: Codable {
     var currency: [Item]
     var trashItems: [Item]
     var vCommonItems: [Item]
@@ -18,16 +18,6 @@ class Inventory {
     var unusualItems: [Item]
     var rareItems: [Item]
     var vRareItems: [Item]
-    
-    let headerImages: [UIImage] = [
-        UIImage(named: "trashLabel")!,
-        UIImage(named: "vCommonLabel")!,
-        UIImage(named: "commonLabel")!,
-        UIImage(named: "uncommonLabel")!,
-        UIImage(named: "unusualLabel")!,
-        UIImage(named: "rareLabel")!,
-        UIImage(named: "vRareLabel")!
-    ]
     
     init() {
         //set up empty inventory
@@ -80,7 +70,7 @@ class Inventory {
         return allItems
     }
     
-    func addItemInCategory(rarity: Item.Rarity, quantity: Int) -> (String, UIImage) {
+    func addItemInCategory(rarity: Item.Rarity, quantity: Int) -> (String, String) {
         if rarity == .currency {
             self.currency[0].quantity += quantity
             return (currency[0].name, currency[0].image)
@@ -127,3 +117,13 @@ class Inventory {
 }
 
 let defaultItem = Item(name: "ERROR", rarity: .trash, imageName: "bone")
+
+let headerImages: [UIImage] = [
+    UIImage(named: "trashLabel")!,
+    UIImage(named: "vCommonLabel")!,
+    UIImage(named: "commonLabel")!,
+    UIImage(named: "uncommonLabel")!,
+    UIImage(named: "unusualLabel")!,
+    UIImage(named: "rareLabel")!,
+    UIImage(named: "vRareLabel")!
+]

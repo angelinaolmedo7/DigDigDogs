@@ -28,14 +28,14 @@ class User {
         inventory = Inventory()
     }
     
-    func handleItemRoll (_ itemRoll: (dp: Int, roll: Int)) -> (String, UIImage) {
+    func handleItemRoll (_ itemRoll: (dp: Int, roll: Int)) -> (String, String) {
         // Make sure inv exists
         guard self.inventory != nil else {
             return (defaultItem.name, defaultItem.image)
         }
         // Determine item
 //        print(itemRoll.dp)
-        var newItem: (itmName:(String, UIImage), quantity:Int) = ((defaultItem.name, defaultItem.image), 1)  // name should be overwritten
+        var newItem: (itmName:(String, String), quantity:Int) = ((defaultItem.name, defaultItem.image), 1)  // name should be overwritten
         if itemRoll.roll <= 30 {  // 30% coins
             newItem.itmName = inventory.addItemInCategory(rarity: .currency, quantity: calcCoins(exponent(base: 2, exp: itemRoll.dp)))
         }

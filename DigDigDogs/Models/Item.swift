@@ -9,9 +9,9 @@
 import Foundation
 import UIKit
 
-struct Item : Hashable{
+struct Item : Hashable, Codable{
     
-    enum Rarity: String{
+    enum Rarity: String, Codable{
         case currency = "currency"
         case trash = "trash"
         case vcommon = "very common"
@@ -25,13 +25,13 @@ struct Item : Hashable{
     
     var name: String!
     var rarity: Rarity!
-    var image: UIImage
+    var image: String!
     var quantity: Int!
     
     init(name: String, rarity: Rarity, imageName: String, quantity: Int = 0) {
         self.name = name
         self.rarity = rarity
-        self.image = UIImage(named: imageName)!
+        self.image = imageName
         self.quantity = quantity
     }
 }
