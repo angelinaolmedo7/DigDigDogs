@@ -10,6 +10,7 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    var persistence: PersistenceLayer!
     var user: User!
     
     @IBOutlet weak var dogOneButton: UIButton!
@@ -33,10 +34,9 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buttons = [dogOneButton, dogTwoButton, dogThreeButton]
+        persistence = PersistenceLayer()
+        user = persistence.user
         setUpBackground() // add background view. For now default grass.
-        if user == nil {
-            user = User()  // init new user object if does not already exist. This includes an inventory object and list of dogs.
-        }
         setUpDogs()
     }
     
@@ -69,6 +69,7 @@ class HomeViewController: UIViewController {
 
     @IBAction func inventoryButtonSelected(_ sender: Any) {
         let invController = InventoryViewController()
+        print(self.persistence.user.inventory.getAllItems(withCurrency: true))
         invController.user = self.user
 //        self.view.window!.rootViewController = invController
         self.present(invController, animated: true, completion: nil)
@@ -91,7 +92,7 @@ class HomeViewController: UIViewController {
     }
     
 func popInOut(stack: UIStackView!, dog: Dog!) {
-    let itemString = self.user.handleItemRoll(dog.generateResource())
+    let itemString = self.persistence.handleItemRoll(dog.generateResource())
     (stack.arrangedSubviews[1] as! UILabel).text = itemString.0
     (stack.arrangedSubviews[0] as! UIImageView).image = UIImage(named: itemString.1)!
         UIView.animate(withDuration: 0.2, animations: {

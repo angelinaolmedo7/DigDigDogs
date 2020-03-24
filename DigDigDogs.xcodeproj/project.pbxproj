@@ -34,6 +34,7 @@
 		295E928D242351750052C890 /* LockedDogTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E928B242351750052C890 /* LockedDogTableViewCell.xib */; };
 		295E9290242418470052C890 /* DogSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E928E242418470052C890 /* DogSelectionViewController.swift */; };
 		295E9291242418470052C890 /* DogSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E928F242418470052C890 /* DogSelectionViewController.xib */; };
+		295E9295242994240052C890 /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9294242994230052C890 /* PersistenceLayer.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -66,6 +67,7 @@
 		295E928B242351750052C890 /* LockedDogTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LockedDogTableViewCell.xib; sourceTree = "<group>"; };
 		295E928E242418470052C890 /* DogSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogSelectionViewController.swift; sourceTree = "<group>"; };
 		295E928F242418470052C890 /* DogSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogSelectionViewController.xib; sourceTree = "<group>"; };
+		295E9294242994230052C890 /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,6 +152,7 @@
 				295E92712421D3E90052C890 /* User.swift */,
 				295E927E242232950052C890 /* Item.swift */,
 				295E9280242233A50052C890 /* Inventory.swift */,
+				295E9294242994230052C890 /* PersistenceLayer.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -256,6 +259,7 @@
 				295E927524220E9A0052C890 /* DogSelectionTableViewCell.swift in Sources */,
 				295E9279242211790052C890 /* DogSelectionTableViewController.swift in Sources */,
 				295E9252242193ED0052C890 /* ContentView.swift in Sources */,
+				295E9295242994240052C890 /* PersistenceLayer.swift in Sources */,
 				295E92722421D3E90052C890 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
