@@ -37,7 +37,9 @@ class User: Codable {
 //        print(itemRoll.dp)
         var newItem: (itmName:(String, String), quantity:Int) = ((defaultItem.name, defaultItem.image), 1)  // name should be overwritten
         if itemRoll.roll <= 30 {  // 30% coins
-            newItem.itmName = inventory.addItemInCategory(rarity: .currency, quantity: calcCoins(exponent(base: 2, exp: itemRoll.dp)))
+            let coins = calcCoins(exponent(base: 2, exp: itemRoll.dp))
+            newItem.itmName = inventory.addItemInCategory(rarity: .currency, quantity: coins)
+            newItem.quantity = coins
         }
         else {
             if itemRoll.dp == 1 {

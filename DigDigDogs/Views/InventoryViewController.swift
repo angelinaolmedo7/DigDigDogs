@@ -26,19 +26,19 @@ class InventoryViewController: UIViewController {
 
 extension InventoryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return user.inventory.getAllItems().count
+        return user.inventory.getAllItems(withCurrency: true).count
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
-        return user.inventory.getAllItems()[section].count
+        return user.inventory.getAllItems(withCurrency: true)[section].count
 
     }
 
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: InventoryCollectionViewCell.identifier, for: indexPath) as! InventoryCollectionViewCell
         
-            let item = user.inventory.getAllItems()[indexPath.section][indexPath.row]
+            let item = user.inventory.getAllItems(withCurrency: true)[indexPath.section][indexPath.row]
             cell.setInfo(item: item)
         
             return cell

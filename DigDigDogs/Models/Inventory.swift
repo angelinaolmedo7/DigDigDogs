@@ -22,7 +22,7 @@ class Inventory: Codable {
     init() {
         //set up empty inventory
         currency = [
-            Item(name: "coins", rarity: .currency, imageName: "can")  //shouldn't need an image for now
+            Item(name: "coins", rarity: .currency, imageName: "coin")
         ]
         trashItems = [
             Item(name: "bottle cap", rarity: .trash, imageName: "cap"),
