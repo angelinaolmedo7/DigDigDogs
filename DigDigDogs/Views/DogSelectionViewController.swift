@@ -85,14 +85,19 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
         if user.myDogs[indexPath.row].unlocked == false {
             user.myDogs[indexPath.row].unlocked = true
         }
+        else if user.activeDogs.contains(indexPath.row) {  // dog already selected
+            user.activeDogs.remove(at: user.activeDogs.firstIndex(of: indexPath.row)!)
+            print("removing dog")
+        }
         else {
 //            (self.presentingViewController as! HomeViewController).deactivateConstraints()
             if user.activeDogs.count >= 3 {
                 user.activeDogs.remove(at: 0)
             }
             user.activeDogs.append(indexPath.row)
-            (self.presentingViewController as! HomeViewController).setUpDogs()
         }
+        (self.presentingViewController as! HomeViewController).setUpDogs()
+        (self.presentingViewController as! HomeViewController).persistence.save()
         tableView.performBatchUpdates({
             self.tableView.reloadRows(at: [indexPath], with: .none)
         })

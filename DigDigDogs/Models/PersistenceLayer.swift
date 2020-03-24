@@ -65,7 +65,10 @@ struct PersistenceLayer {
         return rtnString
     }
     
-     mutating func setNeedsToReloadUser() {
+    mutating func setNeedsToReloadUser() {
             self.loadUser()
+    }
+    mutating func save() {
+        self.saveUser()
     }
 }
