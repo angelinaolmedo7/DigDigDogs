@@ -145,7 +145,7 @@ class Inventory: Codable {
     }
     
     func getItemByName(itemName: String) -> Item? {
-        let items = self.getAllItems()
+        let items = self.getAllItems(withCurrency: true)
         for category in items {
             for item in category {
                 if item.name == itemName {

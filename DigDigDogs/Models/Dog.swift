@@ -50,9 +50,9 @@ let genericDogNames : [String] = [
 
 let dogsDict: [String: Dog] = [
     "mutt": Dog(breed: "Mutt", name: genericDogNames.randomElement()!, imageName: "mutt", purchaseCost: [], dp: 1, unlocked: true),
-    "pug": Dog(breed: "Pug", name: genericDogNames.randomElement()!, imageName: "pug", purchaseCost: [PriceItem(item: defaultInventory.getItemByName(itemName: "wrapper")!)], dp: 1),
-    "bc": Dog(breed: "Border Collie", name: genericDogNames.randomElement()!, imageName: "borderCollie", purchaseCost: [], dp: 2),
-    "aussie": Dog(breed: "Australian Shepherd", name: "Tahoe", imageName: "tahoe", purchaseCost: [], dp: 3),
-    "cat": Dog(breed: "Dog?", name: "Lilac", imageName: "lilac", purchaseCost: [], dp: 4)
+    "pug": Dog(breed: "Pug", name: genericDogNames.randomElement()!, imageName: "pug", purchaseCost: [PriceItem(item: defaultInventory.getItemByName(itemName: "coins")!, quantity: -30), PriceItem(item: defaultInventory.getItemByName(itemName: "wrapper")!)], dp: 1),
+    "bc": Dog(breed: "Border Collie", name: genericDogNames.randomElement()!, imageName: "borderCollie", purchaseCost: [PriceItem(item: defaultInventory.getItemByName(itemName: "coins")!, quantity: -30), PriceItem(item: defaultInventory.getItemByName(itemName: "wrapper")!)], dp: 2),
+    "aussie": Dog(breed: "Australian Shepherd", name: "Tahoe", imageName: "tahoe", purchaseCost: [PriceItem(item: defaultInventory.getItemByName(itemName: "coins")!, quantity: -30), PriceItem(item: defaultInventory.getItemByName(itemName: "wrapper")!)], dp: 3),
+    "cat": Dog(breed: "Dog?", name: "Lilac", imageName: "lilac", purchaseCost: [PriceItem(item: defaultInventory.getItemByName(itemName: "coins")!, quantity: -30), PriceItem(item: defaultInventory.getItemByName(itemName: "wrapper")!)], dp: 4)
 ]
 

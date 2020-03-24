@@ -35,7 +35,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         buttons = [dogOneButton, dogTwoButton, dogThreeButton]
         persistence = PersistenceLayer()
-        persistence.reset() // reset for testing
+//        persistence.reset() // reset for testing
         user = persistence.user
         setUpBackground() // add background view. For now default grass.
         setUpDogs()
