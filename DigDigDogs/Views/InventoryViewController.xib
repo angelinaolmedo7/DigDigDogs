@@ -39,6 +39,9 @@
                         <constraint firstAttribute="width" secondItem="YoZ-LL-t7m" secondAttribute="height" multiplier="363:149" id="DSp-ki-heb"/>
                     </constraints>
                     <state key="normal" image="backButton"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="fKs-aA-9QE"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" cocoaTouchSystemColor="viewFlipsideBackgroundColor"/>

@@ -37,10 +37,14 @@ class DogSelectionViewController: UIViewController {
         
         tableView.dataSource = self
         tableView.delegate = self
+        
         // Do any additional setup after loading the view.
     }
 
-
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     /*
     // MARK: - Navigation
 

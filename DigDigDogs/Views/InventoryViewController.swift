@@ -18,7 +18,10 @@ class InventoryViewController: UIViewController {
        collectionView.register(InventoryCollectionViewCell.nib, forCellWithReuseIdentifier: InventoryCollectionViewCell.identifier)
         collectionView.dataSource = self
     }
-
+    
+    @IBAction func backButtonPressed(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 extension InventoryViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {

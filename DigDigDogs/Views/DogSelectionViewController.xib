@@ -18,36 +18,39 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Inventory" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmb-4o-42L">
-                    <rect key="frame" x="20" y="64" width="374" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <nil key="textColor"/>
-                    <nil key="highlightedColor"/>
-                </label>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wck-It-Vio">
-                    <rect key="frame" x="20" y="105" width="374" height="649"/>
+                    <rect key="frame" x="20" y="194.5" width="374" height="576.5"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gV6-sD-Ngf">
-                    <rect key="frame" x="20" y="774" width="165.5" height="68"/>
+                    <rect key="frame" x="20" y="791" width="124" height="51"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="gV6-sD-Ngf" secondAttribute="height" multiplier="363:149" id="qKj-f3-xJg"/>
                     </constraints>
                     <state key="normal" image="backButton"/>
+                    <connections>
+                        <action selector="backButtonPressed:" destination="-1" eventType="touchUpInside" id="XuR-wc-Eph"/>
+                    </connections>
                 </button>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="dogsButton" translatesAutoresizingMaskIntoConstraints="NO" id="qQ0-RL-KrE">
+                    <rect key="frame" x="103.5" y="64" width="207" height="110.5"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="qQ0-RL-KrE" secondAttribute="height" multiplier="15:8" id="9Va-dZ-ivG"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
                 <constraint firstItem="gV6-sD-Ngf" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="3LN-6n-Zkm"/>
-                <constraint firstItem="gmb-4o-42L" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="5WX-no-otY"/>
                 <constraint firstItem="gV6-sD-Ngf" firstAttribute="top" secondItem="wck-It-Vio" secondAttribute="bottom" constant="20" id="9Iw-xd-GMS"/>
-                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="gmb-4o-42L" secondAttribute="trailing" constant="20" id="DwH-Zl-efQ"/>
-                <constraint firstItem="gV6-sD-Ngf" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="Laa-pb-Yat"/>
+                <constraint firstItem="gV6-sD-Ngf" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.3" id="Laa-pb-Yat"/>
+                <constraint firstItem="qQ0-RL-KrE" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.5" id="MMg-xx-xn9"/>
+                <constraint firstItem="qQ0-RL-KrE" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="WXm-mh-u9u"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="gV6-sD-Ngf" secondAttribute="bottom" constant="20" id="bj5-jw-Pm5"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="wck-It-Vio" secondAttribute="trailing" constant="20" id="ijJ-WF-i0h"/>
-                <constraint firstItem="gmb-4o-42L" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="lgh-cb-XyH"/>
-                <constraint firstItem="wck-It-Vio" firstAttribute="top" secondItem="gmb-4o-42L" secondAttribute="bottom" constant="20" id="pAq-6v-OWL"/>
+                <constraint firstItem="wck-It-Vio" firstAttribute="top" secondItem="qQ0-RL-KrE" secondAttribute="bottom" constant="20" id="rXz-wt-LdN"/>
                 <constraint firstItem="wck-It-Vio" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sJH-sI-hAG"/>
+                <constraint firstItem="qQ0-RL-KrE" firstAttribute="centerX" secondItem="fnl-2z-Ty3" secondAttribute="centerX" id="uDh-Pc-QP2"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="153"/>
@@ -55,5 +58,6 @@
     </objects>
     <resources>
         <image name="backButton" width="363" height="149"/>
+        <image name="dogsButton" width="321" height="159"/>
     </resources>
 </document>
