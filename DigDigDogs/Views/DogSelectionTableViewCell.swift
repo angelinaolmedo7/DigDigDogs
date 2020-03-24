@@ -32,12 +32,15 @@ class DogSelectionTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setInfo (dog: Dog) {
+    func setInfo (dog: Dog, selected: Bool = true) {
         if dog.unlocked {
             dogImage.image = UIImage(named: dog.image)
         }
         else {
             dogImage.image = .checkmark  // shouldn't happen
+        }
+        if !selected {
+            dogImage.alpha = 0.5
         }
         dogBreedLabel.text = dog.breed
         nameLabel.text = dog.dogName

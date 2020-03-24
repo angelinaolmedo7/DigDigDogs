@@ -15,7 +15,6 @@ struct PersistenceLayer {
     private static let userDefaultsKeyValue = "USER"
 
     init() {
-        print("loading user")
         self.loadUser()
     }
     
@@ -25,7 +24,6 @@ struct PersistenceLayer {
         guard
             let userData = userDefaults.data(forKey: PersistenceLayer.userDefaultsKeyValue),
             let user = try? JSONDecoder().decode(User.self, from: userData) else {
-                print("making new user")
                 createNewUser()
                 return
         }
@@ -53,8 +51,8 @@ struct PersistenceLayer {
 
     }
     
-    mutating func delete() {
-        // don't do anything, yet
+    mutating func reset() {
+        createNewUser()
     }
     
     mutating func handleItemRoll (_ itemRoll: (dp: Int, roll: Int)) -> (String, String) {

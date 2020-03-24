@@ -64,7 +64,7 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
         let dog = user.myDogs[indexPath.row]
         if dog.unlocked {
             let cell = tableView.dequeueReusableCell(withIdentifier: DogSelectionTableViewCell.identifier, for: indexPath) as! DogSelectionTableViewCell
-            cell.setInfo(dog: dog)
+            cell.setInfo(dog: dog, selected: user.activeDogs.contains(indexPath.row))
             return cell
         }
         else {
@@ -87,7 +87,6 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
         }
         else if user.activeDogs.contains(indexPath.row) {  // dog already selected
             user.activeDogs.remove(at: user.activeDogs.firstIndex(of: indexPath.row)!)
-            print("removing dog")
         }
         else {
 //            (self.presentingViewController as! HomeViewController).deactivateConstraints()
