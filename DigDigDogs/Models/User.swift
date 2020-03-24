@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class User {
+class User: Codable {
     var myDogs: [Dog]
     
     //only store the index in the myDogs list:
