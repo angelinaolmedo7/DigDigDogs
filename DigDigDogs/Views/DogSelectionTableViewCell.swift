@@ -44,7 +44,7 @@ class DogSelectionTableViewCell: UITableViewCell {
         }
         dogBreedLabel.text = dog.breed
         nameLabel.text = dog.dogName
-        dpLabel.text = String(dog.dp)
+        dpLabel.text = "Level " + String(dog.dp)
     }
     
 }

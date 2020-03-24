@@ -34,4 +34,8 @@ struct Item : Hashable, Codable{
         self.image = imageName
         self.quantity = quantity
     }
+    
+    func isSameItem(other: Item) -> Bool {
+        return(other.name == self.name && other.rarity == self.rarity && other.image == self.image)
+    }
 }

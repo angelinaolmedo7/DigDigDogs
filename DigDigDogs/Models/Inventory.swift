@@ -27,7 +27,7 @@ class Inventory: Codable {
         trashItems = [
             Item(name: "bottle cap", rarity: .trash, imageName: "cap"),
             Item(name: "wrapper", rarity: .trash, imageName: "wrapper"),
-            Item(name: "can", rarity: .trash, imageName: "can")
+//            Item(name: "can", rarity: .trash, imageName: "can")
         ]
         vCommonItems = [
             Item(name: "twine", rarity: .vcommon, imageName: "twine"),
@@ -114,6 +114,69 @@ class Inventory: Codable {
             return (defaultItem.name, defaultItem.image)
         }
     }
+    
+    func purchaseDog(dog: Dog!) -> Bool {
+        for price in dog.purchaseCost {
+            if (self.getItemByName(itemName: price.item.name)?.quantity)! < (price.quantity * -1) {
+                return false  // insufficient resources
+            }
+        }
+        // sufficient resources, deduct cost
+        for price in dog.purchaseCost {  // go through each category. revise later.
+            self.addItemByName(itemName: price.item.name, category: &currency, quantity: price.quantity)
+            self.addItemByName(itemName: price.item.name, category: &trashItems, quantity: price.quantity)
+            self.addItemByName(itemName: price.item.name, category: &vCommonItems, quantity: price.quantity)
+            self.addItemByName(itemName: price.item.name, category: &commonItems, quantity: price.quantity)
+            self.addItemByName(itemName: price.item.name, category: &uncommonItems, quantity: price.quantity)
+            self.addItemByName(itemName: price.item.name, category: &unusualItems, quantity: price.quantity)
+            self.addItemByName(itemName: price.item.name, category: &rareItems, quantity: price.quantity)
+            self.addItemByName(itemName: price.item.name, category: &vRareItems, quantity: price.quantity)
+        }
+        return true
+    }
+    
+    func addItemByName(itemName: String, category: inout [Item], quantity: Int = 1) {
+        for ind in 0..<category.count {
+            if category[ind].name == itemName {
+                category[ind].quantity += quantity
+                return
+            }
+        }
+    }
+    
+    func getItemByName(itemName: String) -> Item? {
+        let items = self.getAllItems()
+        for category in items {
+            for item in category {
+                if item.name == itemName {
+                    return item
+                }
+            }
+        }
+        return nil
+    }
+    
+    func checkAllCompliance() {
+        checkCompliance(selfCategory: &self.currency, defaultCategory: defaultInventory.currency)
+        checkCompliance(selfCategory: &self.vCommonItems, defaultCategory: defaultInventory.vCommonItems)
+        checkCompliance(selfCategory: &self.commonItems, defaultCategory: defaultInventory.commonItems)
+        checkCompliance(selfCategory: &self.uncommonItems, defaultCategory: defaultInventory.uncommonItems)
+        checkCompliance(selfCategory: &self.unusualItems, defaultCategory: defaultInventory.unusualItems)
+        checkCompliance(selfCategory: &self.rareItems, defaultCategory: defaultInventory.rareItems)
+        checkCompliance(selfCategory: &self.vRareItems, defaultCategory: defaultInventory.vRareItems)
+    }
+    
+    func checkCompliance(selfCategory: inout [Item], defaultCategory: [Item]) {
+        for ind in selfCategory.count..<defaultCategory.count {  // add any missing new items
+            selfCategory.append(defaultCategory[ind])
+        }
+        for ind in 0..<selfCategory.count {  // update image info for any old items
+            if !selfCategory[ind].isSameItem(other: defaultCategory[ind]) {
+                assert(selfCategory[ind].name == defaultCategory[ind].name, "New item added incorrectly")
+                selfCategory[ind].image = defaultCategory[ind].image
+            }
+        }
+    }
 }
 
 let defaultItem = Item(name: "ERROR", rarity: .trash, imageName: "bone")
@@ -127,3 +190,5 @@ let headerImages: [UIImage] = [
     UIImage(named: "rareLabel")!,
     UIImage(named: "vRareLabel")!
 ]
+
+let defaultInventory = Inventory()

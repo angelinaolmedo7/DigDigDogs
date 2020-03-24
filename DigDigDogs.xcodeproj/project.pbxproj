@@ -35,6 +35,7 @@
 		295E9290242418470052C890 /* DogSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E928E242418470052C890 /* DogSelectionViewController.swift */; };
 		295E9291242418470052C890 /* DogSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E928F242418470052C890 /* DogSelectionViewController.xib */; };
 		295E9295242994240052C890 /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9294242994230052C890 /* PersistenceLayer.swift */; };
+		295E9297242A299F0052C890 /* PriceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9296242A299F0052C890 /* PriceItem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		295E928E242418470052C890 /* DogSelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogSelectionViewController.swift; sourceTree = "<group>"; };
 		295E928F242418470052C890 /* DogSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogSelectionViewController.xib; sourceTree = "<group>"; };
 		295E9294242994230052C890 /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
+		295E9296242A299F0052C890 /* PriceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItem.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +155,7 @@
 				295E927E242232950052C890 /* Item.swift */,
 				295E9280242233A50052C890 /* Inventory.swift */,
 				295E9294242994230052C890 /* PersistenceLayer.swift */,
+				295E9296242A299F0052C890 /* PriceItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -252,6 +255,7 @@
 				295E927D2422146F0052C890 /* UIViewControllerExtensions.swift in Sources */,
 				295E92702421CBC60052C890 /* Dog.swift in Sources */,
 				295E926D2421A64A0052C890 /* InventoryViewController.swift in Sources */,
+				295E9297242A299F0052C890 /* PriceItem.swift in Sources */,
 				295E9250242193ED0052C890 /* SceneDelegate.swift in Sources */,
 				295E9288242328EA0052C890 /* InventoryCollectionViewCell.swift in Sources */,
 				295E9284242325CF0052C890 /* InventoryCollectionViewController.swift in Sources */,

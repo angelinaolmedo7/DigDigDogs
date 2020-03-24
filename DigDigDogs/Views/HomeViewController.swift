@@ -35,6 +35,7 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         buttons = [dogOneButton, dogTwoButton, dogThreeButton]
         persistence = PersistenceLayer()
+        persistence.reset() // reset for testing
         user = persistence.user
         setUpBackground() // add background view. For now default grass.
         setUpDogs()
@@ -69,7 +70,6 @@ class HomeViewController: UIViewController {
 
     @IBAction func inventoryButtonSelected(_ sender: Any) {
         let invController = InventoryViewController()
-        print(self.persistence.user.inventory.getAllItems(withCurrency: true))
         invController.user = self.user
 //        self.view.window!.rootViewController = invController
         self.present(invController, animated: true, completion: nil)

@@ -86,8 +86,13 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if user.myDogs[indexPath.row].unlocked == false {
-            user.myDogs[indexPath.row].unlocked = true
+        if user.myDogs[indexPath.row].unlocked == false {  // attempt unlock dog
+            if user.inventory.purchaseDog(dog: user.myDogs[indexPath.row]) {
+                user.myDogs[indexPath.row].unlocked = true
+            }
+            else {
+                print("insufficient resources")
+            }
         }
         else if user.activeDogs.contains(indexPath.row) {  // dog already selected
             user.activeDogs.remove(at: user.activeDogs.firstIndex(of: indexPath.row)!)

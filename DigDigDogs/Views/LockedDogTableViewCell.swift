@@ -11,7 +11,8 @@ import UIKit
 class LockedDogTableViewCell: UITableViewCell {
     
     static let identifier = "LockedDogTableViewCell"
-
+    @IBOutlet weak var resourceLabel: UILabel!
+    
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
@@ -28,6 +29,11 @@ class LockedDogTableViewCell: UITableViewCell {
     }
     
     func setInfo (dog: Dog) {
+        var priceString: String = "Cost: "
+        for item in dog.purchaseCost {
+            priceString += "\(item.item.name!) \(String(item.quantity * -1)), "
+        }
+        resourceLabel.text = priceString
 
     }
     

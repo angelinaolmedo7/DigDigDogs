@@ -28,7 +28,7 @@ struct PersistenceLayer {
                 return
         }
         self.user = user
-        print(self.user.activeDogs)
+        self.user.inventory.checkAllCompliance()
     }
     
     @discardableResult
