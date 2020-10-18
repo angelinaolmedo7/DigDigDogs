@@ -50,37 +50,37 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4H-xI-hIy" userLabel="dogOneButton">
-                    <rect key="frame" x="218.5" y="229.5" width="165.5" height="165.5"/>
+                    <rect key="frame" x="177" y="179.5" width="207" height="207"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="M4H-xI-hIy" secondAttribute="height" multiplier="1:1" placeholder="YES" id="zoG-6V-Yb6"/>
                     </constraints>
-                    <state key="normal" image="mutt"/>
+                    <state key="normal" image="mutt-full"/>
                     <connections>
                         <action selector="dogOnePressed:" destination="-1" eventType="touchUpInside" id="sPr-8a-2sf"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUV-y6-ZZV" userLabel="dogTwoButton">
-                    <rect key="frame" x="30" y="425" width="165.5" height="165.5"/>
+                    <rect key="frame" x="30" y="386.5" width="207" height="207"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="GUV-y6-ZZV" secondAttribute="height" multiplier="1:1" placeholder="YES" id="VeB-QL-Jhm"/>
                     </constraints>
-                    <state key="normal" image="pug"/>
+                    <state key="normal" image="mutt-full"/>
                     <connections>
                         <action selector="dogTwoPressed:" destination="-1" eventType="touchUpInside" id="XBt-83-RaY"/>
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wli-IM-nGb" userLabel="dogThreeButton">
-                    <rect key="frame" x="218.5" y="620.5" width="165.5" height="165.5"/>
+                    <rect key="frame" x="177" y="593.5" width="207" height="207"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="wli-IM-nGb" secondAttribute="height" multiplier="1:1" placeholder="YES" id="4TL-T7-HSC"/>
                     </constraints>
-                    <state key="normal" image="borderCollie"/>
+                    <state key="normal" image="mutt-full"/>
                     <connections>
                         <action selector="dogThreePressed:" destination="-1" eventType="touchUpInside" id="01y-RS-kLV"/>
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XjX-N8-kwX">
-                    <rect key="frame" x="168.5" y="365" width="200" height="50"/>
+                    <rect key="frame" x="197" y="356.5" width="200" height="50"/>
                     <subviews>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="0VT-B7-nGb">
                             <rect key="frame" x="0.0" y="-55.5" width="0.0" height="131"/>
@@ -98,10 +98,10 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f1A-qa-5cZ">
-                    <rect key="frame" x="165.5" y="520.5" width="200" height="50"/>
+                    <rect key="frame" x="187" y="523.5" width="200" height="50"/>
                     <subviews>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="Ovh-ew-RqD">
-                            <rect key="frame" x="0.0" y="-55" width="0.0" height="131"/>
+                            <rect key="frame" x="0.0" y="-55.5" width="0.0" height="131"/>
                         </imageView>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vgb-eA-cXU">
                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
@@ -116,10 +116,10 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XnD-4n-ylf">
-                    <rect key="frame" x="168.5" y="756" width="200" height="50"/>
+                    <rect key="frame" x="197" y="770.5" width="200" height="50"/>
                     <subviews>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="Vv4-Kx-tB6">
-                            <rect key="frame" x="0.0" y="-55" width="0.0" height="131"/>
+                            <rect key="frame" x="0.0" y="-55.5" width="0.0" height="131"/>
                         </imageView>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik4-Qf-KRA">
                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>
@@ -136,27 +136,27 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="GUV-y6-ZZV" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="1UV-qv-Dl3"/>
+                <constraint firstItem="GUV-y6-ZZV" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.5" id="1UV-qv-Dl3"/>
                 <constraint firstAttribute="trailing" secondItem="wli-IM-nGb" secondAttribute="trailing" constant="30" id="5HM-fh-nCx"/>
-                <constraint firstItem="wli-IM-nGb" firstAttribute="top" secondItem="GUV-y6-ZZV" secondAttribute="bottom" constant="30" id="7Es-eO-4vy"/>
+                <constraint firstItem="wli-IM-nGb" firstAttribute="top" secondItem="GUV-y6-ZZV" secondAttribute="bottom" id="7Es-eO-4vy"/>
                 <constraint firstItem="M4H-xI-hIy" firstAttribute="bottom" secondItem="XjX-N8-kwX" secondAttribute="bottom" constant="-20" id="Atv-g0-q93"/>
                 <constraint firstItem="GUV-y6-ZZV" firstAttribute="bottom" secondItem="f1A-qa-5cZ" secondAttribute="bottom" constant="20" id="CCf-MZ-tvf"/>
                 <constraint firstItem="wli-IM-nGb" firstAttribute="bottom" secondItem="XnD-4n-ylf" secondAttribute="bottom" constant="-20" id="Eky-nT-Bu8"/>
-                <constraint firstItem="M4H-xI-hIy" firstAttribute="top" secondItem="yDW-F0-FCH" secondAttribute="bottom" constant="30" id="JkB-bP-Bwj"/>
-                <constraint firstItem="wli-IM-nGb" firstAttribute="leading" secondItem="XnD-4n-ylf" secondAttribute="leading" constant="50" id="KYC-fq-CbA"/>
+                <constraint firstItem="M4H-xI-hIy" firstAttribute="top" secondItem="yDW-F0-FCH" secondAttribute="bottom" constant="-20" id="JkB-bP-Bwj"/>
+                <constraint firstItem="XnD-4n-ylf" firstAttribute="leading" secondItem="wli-IM-nGb" secondAttribute="leading" constant="20" id="KYC-fq-CbA"/>
                 <constraint firstItem="yDW-F0-FCH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LLq-YE-3UH"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="M4H-xI-hIy" secondAttribute="trailing" constant="30" id="QDv-Hg-Itr"/>
                 <constraint firstItem="yDW-F0-FCH" firstAttribute="top" secondItem="yRG-7M-yZI" secondAttribute="bottom" constant="20" id="SZi-BN-EmA"/>
-                <constraint firstItem="GUV-y6-ZZV" firstAttribute="top" secondItem="M4H-xI-hIy" secondAttribute="bottom" constant="30" id="WQr-9u-nkb"/>
+                <constraint firstItem="GUV-y6-ZZV" firstAttribute="top" secondItem="M4H-xI-hIy" secondAttribute="bottom" id="WQr-9u-nkb"/>
                 <constraint firstItem="yDW-F0-FCH" firstAttribute="width" secondItem="yRG-7M-yZI" secondAttribute="width" multiplier="0.65" id="ZUs-2f-YZn"/>
                 <constraint firstItem="GUV-y6-ZZV" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Zvn-Ab-Vc1"/>
                 <constraint firstItem="yRG-7M-yZI" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="bgX-0y-DVc"/>
-                <constraint firstItem="wli-IM-nGb" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="e9m-1C-aEB"/>
+                <constraint firstItem="wli-IM-nGb" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.5" id="e9m-1C-aEB"/>
                 <constraint firstItem="yRG-7M-yZI" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="fuV-Zx-g6g"/>
-                <constraint firstItem="M4H-xI-hIy" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.4" id="gn4-qj-eWp"/>
+                <constraint firstItem="M4H-xI-hIy" firstAttribute="width" secondItem="fnl-2z-Ty3" secondAttribute="width" multiplier="0.5" id="gn4-qj-eWp"/>
                 <constraint firstItem="yRG-7M-yZI" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="rag-ZH-6FK"/>
-                <constraint firstItem="f1A-qa-5cZ" firstAttribute="leading" secondItem="GUV-y6-ZZV" secondAttribute="trailing" constant="-30" id="xLh-sB-KuU"/>
-                <constraint firstItem="XjX-N8-kwX" firstAttribute="leading" secondItem="M4H-xI-hIy" secondAttribute="leading" constant="-50" id="xdt-BK-spA"/>
+                <constraint firstItem="f1A-qa-5cZ" firstAttribute="leading" secondItem="GUV-y6-ZZV" secondAttribute="trailing" constant="-50" id="xLh-sB-KuU"/>
+                <constraint firstItem="XjX-N8-kwX" firstAttribute="leading" secondItem="M4H-xI-hIy" secondAttribute="leading" constant="20" id="xdt-BK-spA"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="139" y="147"/>
@@ -164,10 +164,8 @@
     </objects>
     <resources>
         <image name="bone" width="155" height="131"/>
-        <image name="borderCollie" width="493" height="398"/>
         <image name="dogsButton" width="321" height="159"/>
         <image name="inventoryButton" width="462" height="173"/>
-        <image name="mutt" width="493" height="421"/>
-        <image name="pug" width="475" height="398"/>
+        <image name="mutt-full" width="600" height="600"/>
     </resources>
 </document>
