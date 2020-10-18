@@ -116,7 +116,7 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XnD-4n-ylf">
-                    <rect key="frame" x="168.5" y="620.5" width="200" height="50"/>
+                    <rect key="frame" x="168.5" y="660.5" width="200" height="50"/>
                     <subviews>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="Vv4-Kx-tB6">
                             <rect key="frame" x="0.0" y="-55.5" width="0.0" height="131"/>
@@ -141,7 +141,7 @@
                 <constraint firstItem="wli-IM-nGb" firstAttribute="top" secondItem="GUV-y6-ZZV" secondAttribute="bottom" constant="30" id="7Es-eO-4vy"/>
                 <constraint firstItem="M4H-xI-hIy" firstAttribute="bottom" secondItem="XjX-N8-kwX" secondAttribute="bottom" constant="-20" id="Atv-g0-q93"/>
                 <constraint firstItem="GUV-y6-ZZV" firstAttribute="bottom" secondItem="f1A-qa-5cZ" secondAttribute="bottom" constant="20" id="CCf-MZ-tvf"/>
-                <constraint firstItem="wli-IM-nGb" firstAttribute="bottom" secondItem="XnD-4n-ylf" secondAttribute="bottom" constant="20" id="Eky-nT-Bu8"/>
+                <constraint firstItem="wli-IM-nGb" firstAttribute="bottom" secondItem="XnD-4n-ylf" secondAttribute="bottom" constant="-20" id="Eky-nT-Bu8"/>
                 <constraint firstItem="M4H-xI-hIy" firstAttribute="top" secondItem="yDW-F0-FCH" secondAttribute="bottom" constant="30" id="JkB-bP-Bwj"/>
                 <constraint firstItem="wli-IM-nGb" firstAttribute="leading" secondItem="XnD-4n-ylf" secondAttribute="leading" constant="50" id="KYC-fq-CbA"/>
                 <constraint firstItem="yDW-F0-FCH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="LLq-YE-3UH"/>
