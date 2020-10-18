@@ -50,9 +50,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M4H-xI-hIy" userLabel="dogOneButton">
-                    <rect key="frame" x="218.5" y="229.5" width="165.5" height="128.5"/>
+                    <rect key="frame" x="218.5" y="229.5" width="165.5" height="165.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="M4H-xI-hIy" secondAttribute="height" multiplier="542:421" placeholder="YES" id="zoG-6V-Yb6"/>
+                        <constraint firstAttribute="width" secondItem="M4H-xI-hIy" secondAttribute="height" multiplier="1:1" placeholder="YES" id="zoG-6V-Yb6"/>
                     </constraints>
                     <state key="normal" image="mutt"/>
                     <connections>
@@ -60,9 +60,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GUV-y6-ZZV" userLabel="dogTwoButton">
-                    <rect key="frame" x="30" y="388" width="165.5" height="138.5"/>
+                    <rect key="frame" x="30" y="425" width="165.5" height="165.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="GUV-y6-ZZV" secondAttribute="height" multiplier="475:398" placeholder="YES" id="VeB-QL-Jhm"/>
+                        <constraint firstAttribute="width" secondItem="GUV-y6-ZZV" secondAttribute="height" multiplier="1:1" placeholder="YES" id="VeB-QL-Jhm"/>
                     </constraints>
                     <state key="normal" image="pug"/>
                     <connections>
@@ -70,9 +70,9 @@
                     </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wli-IM-nGb" userLabel="dogThreeButton">
-                    <rect key="frame" x="218.5" y="556.5" width="165.5" height="134"/>
+                    <rect key="frame" x="218.5" y="620.5" width="165.5" height="165.5"/>
                     <constraints>
-                        <constraint firstAttribute="width" secondItem="wli-IM-nGb" secondAttribute="height" multiplier="493:398" placeholder="YES" id="4TL-T7-HSC"/>
+                        <constraint firstAttribute="width" secondItem="wli-IM-nGb" secondAttribute="height" multiplier="1:1" placeholder="YES" id="4TL-T7-HSC"/>
                     </constraints>
                     <state key="normal" image="borderCollie"/>
                     <connections>
@@ -80,7 +80,7 @@
                     </connections>
                 </button>
                 <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XjX-N8-kwX">
-                    <rect key="frame" x="168.5" y="328" width="200" height="50"/>
+                    <rect key="frame" x="168.5" y="365" width="200" height="50"/>
                     <subviews>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="0VT-B7-nGb">
                             <rect key="frame" x="0.0" y="-55.5" width="0.0" height="131"/>
@@ -98,7 +98,7 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="f1A-qa-5cZ">
-                    <rect key="frame" x="165.5" y="456.5" width="200" height="50"/>
+                    <rect key="frame" x="165.5" y="520.5" width="200" height="50"/>
                     <subviews>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="Ovh-ew-RqD">
                             <rect key="frame" x="0.0" y="-55" width="0.0" height="131"/>
@@ -116,10 +116,10 @@
                     </constraints>
                 </stackView>
                 <stackView opaque="NO" contentMode="left" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="XnD-4n-ylf">
-                    <rect key="frame" x="168.5" y="660.5" width="200" height="50"/>
+                    <rect key="frame" x="168.5" y="756" width="200" height="50"/>
                     <subviews>
                         <imageView hidden="YES" clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bone" translatesAutoresizingMaskIntoConstraints="NO" id="Vv4-Kx-tB6">
-                            <rect key="frame" x="0.0" y="-55.5" width="0.0" height="131"/>
+                            <rect key="frame" x="0.0" y="-55" width="0.0" height="131"/>
                         </imageView>
                         <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="249" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ik4-Qf-KRA">
                             <rect key="frame" x="0.0" y="0.0" width="0.0" height="20.5"/>

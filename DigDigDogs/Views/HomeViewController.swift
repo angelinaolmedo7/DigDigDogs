@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftGifOrigin
 
 class HomeViewController: UIViewController {
     
@@ -58,7 +59,7 @@ class HomeViewController: UIViewController {
         for ind in (0..<user.activeDogs.count) {
             let dogImage: UIImage! = UIImage(named: user.myDogs[user.activeDogs[ind]].image)
             buttons[ind].setImage(dogImage, for: .normal)
-            buttons[ind].heightAnchor.constraint(equalTo: buttons[ind].widthAnchor, multiplier: dogImage.size.height/dogImage.size.width).isActive = true
+            buttons[ind].heightAnchor.constraint(equalTo: buttons[ind].widthAnchor, multiplier: 1).isActive = true
             buttons[ind].isHidden = false
         }
         if user.activeDogs.count < 3 {
@@ -83,6 +84,7 @@ class HomeViewController: UIViewController {
     
     @IBAction func dogOnePressed(_ sender: Any) {
         popInOut(stack: dogOneStackView, dog: user.myDogs[user.activeDogs[0]])
+        self.dogOneButton.setImage(UIImage.gif(name: "mutt-dig"), for: .normal)
     }
     @IBAction func dogTwoPressed(_ sender: Any) {
         popInOut(stack: dogTwoStackView, dog: user.myDogs[user.activeDogs[1]])

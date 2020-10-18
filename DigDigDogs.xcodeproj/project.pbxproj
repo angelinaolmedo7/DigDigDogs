@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -36,6 +36,7 @@
 		295E9291242418470052C890 /* DogSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E928F242418470052C890 /* DogSelectionViewController.xib */; };
 		295E9295242994240052C890 /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9294242994230052C890 /* PersistenceLayer.swift */; };
 		295E9297242A299F0052C890 /* PriceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9296242A299F0052C890 /* PriceItem.swift */; };
+		2962CA92253C73FE00B9068A /* mutt-dig.gif in Resources */ = {isa = PBXBuildFile; fileRef = 2962CA91253C73FD00B9068A /* mutt-dig.gif */; };
 		B48B49AE031643EA33BD47A9 /* Pods_DigDigDogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D7F078853927C399518AAB /* Pods_DigDigDogs.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		295E928F242418470052C890 /* DogSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogSelectionViewController.xib; sourceTree = "<group>"; };
 		295E9294242994230052C890 /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 		295E9296242A299F0052C890 /* PriceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItem.swift; sourceTree = "<group>"; };
+		2962CA91253C73FD00B9068A /* mutt-dig.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "mutt-dig.gif"; sourceTree = "<group>"; };
 		91FF1DAFE964BF93CC19894E /* Pods-DigDigDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDigDogs.release.xcconfig"; path = "Target Support Files/Pods-DigDigDogs/Pods-DigDigDogs.release.xcconfig"; sourceTree = "<group>"; };
 		A1D7F078853927C399518AAB /* Pods_DigDigDogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDigDogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6B5EC219939F5AAC7BA4EF6 /* Pods-DigDigDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDigDogs.debug.xcconfig"; path = "Target Support Files/Pods-DigDigDogs/Pods-DigDigDogs.debug.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +119,7 @@
 		295E924C242193ED0052C890 /* DigDigDogs */ = {
 			isa = PBXGroup;
 			children = (
+				2962CA90253C73DE00B9068A /* GifAssets */,
 				295E927B242214580052C890 /* Controller */,
 				295E926A2421A5B00052C890 /* Models */,
 				295E92612421948C0052C890 /* Views */,
@@ -183,13 +186,20 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		2962CA90253C73DE00B9068A /* GifAssets */ = {
+			isa = PBXGroup;
+			children = (
+				2962CA91253C73FD00B9068A /* mutt-dig.gif */,
+			);
+			path = GifAssets;
+			sourceTree = "<group>";
+		};
 		40CC8B0D683796EDAE63F767 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
 				E6B5EC219939F5AAC7BA4EF6 /* Pods-DigDigDogs.debug.xcconfig */,
 				91FF1DAFE964BF93CC19894E /* Pods-DigDigDogs.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -260,6 +270,7 @@
 				295E9289242328EA0052C890 /* InventoryCollectionViewCell.xib in Resources */,
 				295E9291242418470052C890 /* DogSelectionViewController.xib in Resources */,
 				295E927624220E9A0052C890 /* DogSelectionTableViewCell.xib in Resources */,
+				2962CA92253C73FE00B9068A /* mutt-dig.gif in Resources */,
 				295E927A242211790052C890 /* DogSelectionTableViewController.xib in Resources */,
 				295E926E2421A64A0052C890 /* InventoryViewController.xib in Resources */,
 				295E9254242193F10052C890 /* Assets.xcassets in Resources */,
