@@ -84,7 +84,12 @@ class HomeViewController: UIViewController {
     
     @IBAction func dogOnePressed(_ sender: Any) {
         popInOut(stack: dogOneStackView, dog: user.myDogs[user.activeDogs[0]])
-        self.dogOneButton.setImage(UIImage.gif(name: "mutt-dig"), for: .normal)
+        let gif = UIImage.gif(name: "mutt-dig")
+        self.dogOneButton.setImage(gif, for: .normal)
+        DispatchQueue.main.asyncAfter(deadline: .now() + (gif?.duration ?? 1)) {
+            self.dogOneButton.setImage(UIImage(named: "mutt-full"), for: .normal)
+        }
+        
     }
     @IBAction func dogTwoPressed(_ sender: Any) {
         popInOut(stack: dogTwoStackView, dog: user.myDogs[user.activeDogs[1]])
