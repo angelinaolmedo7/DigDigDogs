@@ -35,6 +35,7 @@ class DogSelectionTableViewCell: UITableViewCell {
     func setInfo (dog: Dog, selected: Bool = true) {
         if dog.unlocked {
             dogImage.image = UIImage(named: dog.image)
+            dogImage.alpha = 1
         }
         else {
             dogImage.image = .checkmark  // shouldn't happen

@@ -149,12 +149,7 @@
 				295E92672421A1170052C890 /* HomeViewController.xib */,
 				295E926B2421A64A0052C890 /* InventoryViewController.swift */,
 				295E926C2421A64A0052C890 /* InventoryViewController.xib */,
-				295E927324220E990052C890 /* DogSelectionTableViewCell.swift */,
-				295E928A242351750052C890 /* LockedDogTableViewCell.swift */,
-				295E928B242351750052C890 /* LockedDogTableViewCell.xib */,
-				295E927424220E990052C890 /* DogSelectionTableViewCell.xib */,
-				295E9277242211790052C890 /* DogSelectionTableViewController.swift */,
-				295E9278242211790052C890 /* DogSelectionTableViewController.xib */,
+				2962CA93253C768900B9068A /* DogSelectionTable */,
 				295E9282242325CF0052C890 /* InventoryCollectionViewController.swift */,
 				295E9286242328EA0052C890 /* InventoryCollectionViewCell.swift */,
 				295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */,
@@ -192,6 +187,19 @@
 				2962CA91253C73FD00B9068A /* mutt-dig.gif */,
 			);
 			path = GifAssets;
+			sourceTree = "<group>";
+		};
+		2962CA93253C768900B9068A /* DogSelectionTable */ = {
+			isa = PBXGroup;
+			children = (
+				295E9277242211790052C890 /* DogSelectionTableViewController.swift */,
+				295E9278242211790052C890 /* DogSelectionTableViewController.xib */,
+				295E928A242351750052C890 /* LockedDogTableViewCell.swift */,
+				295E928B242351750052C890 /* LockedDogTableViewCell.xib */,
+				295E927324220E990052C890 /* DogSelectionTableViewCell.swift */,
+				295E927424220E990052C890 /* DogSelectionTableViewCell.xib */,
+			);
+			path = DogSelectionTable;
 			sourceTree = "<group>";
 		};
 		40CC8B0D683796EDAE63F767 /* Pods */ = {
