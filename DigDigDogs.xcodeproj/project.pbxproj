@@ -145,17 +145,9 @@
 		295E92612421948C0052C890 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				295E92662421A1170052C890 /* HomeViewController.swift */,
-				295E92672421A1170052C890 /* HomeViewController.xib */,
-				295E926B2421A64A0052C890 /* InventoryViewController.swift */,
-				295E926C2421A64A0052C890 /* InventoryViewController.xib */,
-				2962CA93253C768900B9068A /* DogSelectionTable */,
-				295E9282242325CF0052C890 /* InventoryCollectionViewController.swift */,
-				295E9286242328EA0052C890 /* InventoryCollectionViewCell.swift */,
-				295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */,
-				295E9283242325CF0052C890 /* InventoryCollectionViewController.xib */,
-				295E928E242418470052C890 /* DogSelectionViewController.swift */,
-				295E928F242418470052C890 /* DogSelectionViewController.xib */,
+				2962CA94253C799600B9068A /* Home */,
+				2962CA95253C79CE00B9068A /* Inventory */,
+				2962CA93253C768900B9068A /* Dogs */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -189,9 +181,11 @@
 			path = GifAssets;
 			sourceTree = "<group>";
 		};
-		2962CA93253C768900B9068A /* DogSelectionTable */ = {
+		2962CA93253C768900B9068A /* Dogs */ = {
 			isa = PBXGroup;
 			children = (
+				295E928E242418470052C890 /* DogSelectionViewController.swift */,
+				295E928F242418470052C890 /* DogSelectionViewController.xib */,
 				295E9277242211790052C890 /* DogSelectionTableViewController.swift */,
 				295E9278242211790052C890 /* DogSelectionTableViewController.xib */,
 				295E928A242351750052C890 /* LockedDogTableViewCell.swift */,
@@ -199,7 +193,29 @@
 				295E927324220E990052C890 /* DogSelectionTableViewCell.swift */,
 				295E927424220E990052C890 /* DogSelectionTableViewCell.xib */,
 			);
-			path = DogSelectionTable;
+			path = Dogs;
+			sourceTree = "<group>";
+		};
+		2962CA94253C799600B9068A /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				295E92662421A1170052C890 /* HomeViewController.swift */,
+				295E92672421A1170052C890 /* HomeViewController.xib */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		2962CA95253C79CE00B9068A /* Inventory */ = {
+			isa = PBXGroup;
+			children = (
+				295E926B2421A64A0052C890 /* InventoryViewController.swift */,
+				295E926C2421A64A0052C890 /* InventoryViewController.xib */,
+				295E9282242325CF0052C890 /* InventoryCollectionViewController.swift */,
+				295E9283242325CF0052C890 /* InventoryCollectionViewController.xib */,
+				295E9286242328EA0052C890 /* InventoryCollectionViewCell.swift */,
+				295E9287242328EA0052C890 /* InventoryCollectionViewCell.xib */,
+			);
+			path = Inventory;
 			sourceTree = "<group>";
 		};
 		40CC8B0D683796EDAE63F767 /* Pods */ = {
