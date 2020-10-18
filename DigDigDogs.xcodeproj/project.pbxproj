@@ -36,6 +36,7 @@
 		295E9291242418470052C890 /* DogSelectionViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 295E928F242418470052C890 /* DogSelectionViewController.xib */; };
 		295E9295242994240052C890 /* PersistenceLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9294242994230052C890 /* PersistenceLayer.swift */; };
 		295E9297242A299F0052C890 /* PriceItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 295E9296242A299F0052C890 /* PriceItem.swift */; };
+		B48B49AE031643EA33BD47A9 /* Pods_DigDigDogs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A1D7F078853927C399518AAB /* Pods_DigDigDogs.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +71,9 @@
 		295E928F242418470052C890 /* DogSelectionViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogSelectionViewController.xib; sourceTree = "<group>"; };
 		295E9294242994230052C890 /* PersistenceLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceLayer.swift; sourceTree = "<group>"; };
 		295E9296242A299F0052C890 /* PriceItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PriceItem.swift; sourceTree = "<group>"; };
+		91FF1DAFE964BF93CC19894E /* Pods-DigDigDogs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDigDogs.release.xcconfig"; path = "Target Support Files/Pods-DigDigDogs/Pods-DigDigDogs.release.xcconfig"; sourceTree = "<group>"; };
+		A1D7F078853927C399518AAB /* Pods_DigDigDogs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DigDigDogs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E6B5EC219939F5AAC7BA4EF6 /* Pods-DigDigDogs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DigDigDogs.debug.xcconfig"; path = "Target Support Files/Pods-DigDigDogs/Pods-DigDigDogs.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,17 +81,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B48B49AE031643EA33BD47A9 /* Pods_DigDigDogs.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		22654934453B487F664B827E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A1D7F078853927C399518AAB /* Pods_DigDigDogs.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		295E9241242193ED0052C890 = {
 			isa = PBXGroup;
 			children = (
 				295E924C242193ED0052C890 /* DigDigDogs */,
 				295E924B242193ED0052C890 /* Products */,
+				40CC8B0D683796EDAE63F767 /* Pods */,
+				22654934453B487F664B827E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -168,6 +183,16 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
+		40CC8B0D683796EDAE63F767 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E6B5EC219939F5AAC7BA4EF6 /* Pods-DigDigDogs.debug.xcconfig */,
+				91FF1DAFE964BF93CC19894E /* Pods-DigDigDogs.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -175,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 295E925E242193F10052C890 /* Build configuration list for PBXNativeTarget "DigDigDogs" */;
 			buildPhases = (
+				BE013F6BF6BE8D2094B52F3B /* [CP] Check Pods Manifest.lock */,
 				295E9246242193ED0052C890 /* Sources */,
 				295E9247242193ED0052C890 /* Frameworks */,
 				295E9248242193ED0052C890 /* Resources */,
+				FC487B286C584C8968B29BB3 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -241,6 +268,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		BE013F6BF6BE8D2094B52F3B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-DigDigDogs-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FC487B286C584C8968B29BB3 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigDigDogs/Pods-DigDigDogs-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-DigDigDogs/Pods-DigDigDogs-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-DigDigDogs/Pods-DigDigDogs-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		295E9246242193ED0052C890 /* Sources */ = {
@@ -398,6 +467,7 @@
 		};
 		295E925F242193F10052C890 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E6B5EC219939F5AAC7BA4EF6 /* Pods-DigDigDogs.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -418,6 +488,7 @@
 		};
 		295E9260242193F10052C890 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 91FF1DAFE964BF93CC19894E /* Pods-DigDigDogs.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
