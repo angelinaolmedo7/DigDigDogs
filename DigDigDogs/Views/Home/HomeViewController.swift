@@ -40,7 +40,7 @@ class HomeViewController: UIViewController {
         persistence = PersistenceLayer()
 //        persistence.reset() // reset for testing
         user = persistence.user
-        Zephyr.debugEnabled = true 
+        Zephyr.debugEnabled = true
         Zephyr.sync(keys: ["USER"])
         
         
@@ -63,7 +63,10 @@ class HomeViewController: UIViewController {
     
     func setUpDogs() {
         for ind in (0..<user.activeDogs.count) {
-            let dogImage: UIImage! = UIImage(named: user.myDogs[user.activeDogs[ind]].image)
+            var dogImage: UIImage? = UIImage(named: "\(user.myDogs[user.activeDogs[ind]].image ?? "mutt")-full")
+            if dogImage == nil {  // no animation exists yet
+                dogImage = UIImage(named: user.myDogs[user.activeDogs[ind]].image)
+            }
             buttons[ind].setImage(dogImage, for: .normal)
             buttons[ind].heightAnchor.constraint(equalTo: buttons[ind].widthAnchor, multiplier: 1).isActive = true
             buttons[ind].isHidden = false
