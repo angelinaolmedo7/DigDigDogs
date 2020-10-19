@@ -31,8 +31,9 @@ class LockedDogTableViewCell: UITableViewCell {
     func setInfo (dog: Dog) {
         var priceString: String = "Cost: "
         for item in dog.purchaseCost {
-            priceString += "\(item.item.name!) \(String(item.quantity * -1)), "
+            priceString += "\(String(item.quantity * -1)) \(item.item.name!), "
         }
+        priceString.removeLast(2)
         resourceLabel.text = priceString
 
     }

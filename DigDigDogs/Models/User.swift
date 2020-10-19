@@ -20,10 +20,20 @@ class User: Codable {
     var inventory : Inventory!
     
     init() {
-        myDogs = [dogsDict["mutt"]!, dogsDict["pug"]!, dogsDict["bc"]!, dogsDict["aussie"]!, dogsDict["cat"]!]
+        myDogs = [
+            dogsDict["mutt"]!,
+            dogsDict["pug"]!,
+            dogsDict["bc"]!,
+            dogsDict["gshep"]!,
+            dogsDict["bgshep"]!,
+            dogsDict["cockerspan"]!,
+            dogsDict["bullterr"]!,
+            dogsDict["ckcspan"]!,
+            dogsDict["aussie"]!,
+            dogsDict["cat"]!]
         activeDogs = [0]  // start with only mutt active
         unlockedDogs = [0]  // mutt is default unlocked
-        lockedDogs = [1,2,3,4]  // rest are locked.
+        lockedDogs = [1,2,3,4,5,6,7,8,9]  // rest are locked.
         
         inventory = Inventory()
     }
