@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import Zephyr
 
 struct PersistenceLayer {
 
@@ -48,6 +49,7 @@ struct PersistenceLayer {
         let userDefaults = UserDefaults.standard
         userDefaults.set(userData, forKey: PersistenceLayer.userDefaultsKeyValue)
         userDefaults.synchronize()
+        Zephyr.sync(keys: ["USER"])
 
     }
     

@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftGifOrigin
+import Zephyr
 
 class HomeViewController: UIViewController {
     
@@ -35,9 +36,14 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         buttons = [dogOneButton, dogTwoButton, dogThreeButton]
+        
         persistence = PersistenceLayer()
 //        persistence.reset() // reset for testing
         user = persistence.user
+        Zephyr.debugEnabled = true 
+        Zephyr.sync(keys: ["USER"])
+        
+        
         setUpBackground() // add background view. For now default grass.
         setUpDogs()
     }
