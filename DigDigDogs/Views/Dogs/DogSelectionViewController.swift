@@ -91,6 +91,10 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
                 user.myDogs[indexPath.row].unlocked = true
             }
             else {
+                let alert = UIAlertController(title: "Insufficient resources", message: "Keep digging and try again!", preferredStyle: .alert)
+                alert.addAction(UIAlertAction(title: "Okay", style: .default, handler: nil))
+
+                self.present(alert, animated: true)
                 print("insufficient resources")
             }
         }
