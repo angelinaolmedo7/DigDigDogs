@@ -13,7 +13,7 @@ struct PersistenceLayer {
 
     // Adapted from habitual
     private(set) var user: User!
-    private static let userDefaultsKeyValue = "USER"
+    private static let userDefaultsKeyValue = "USER-DIGDIGDOGS"
 
     init() {
         self.loadUser()
@@ -49,7 +49,7 @@ struct PersistenceLayer {
         let userDefaults = UserDefaults.standard
         userDefaults.set(userData, forKey: PersistenceLayer.userDefaultsKeyValue)
         userDefaults.synchronize()
-        Zephyr.sync(keys: ["USER"])
+        Zephyr.sync(keys: ["USER-DIGDIGDOGS"])
 
     }
     

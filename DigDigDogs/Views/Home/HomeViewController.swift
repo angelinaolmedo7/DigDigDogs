@@ -41,7 +41,7 @@ class HomeViewController: UIViewController {
 //        persistence.reset() // reset for testing
         user = persistence.user
         Zephyr.debugEnabled = true
-        Zephyr.sync(keys: ["USER"])
+        Zephyr.sync(keys: ["USER-DIGDIGDOGS"])
         
         
         setUpBackground() // add background view. For now default grass.
