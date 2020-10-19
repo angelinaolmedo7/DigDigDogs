@@ -14,9 +14,9 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B8F50C44D7D0495434EB921B6FA6988B"
-               BuildableName = "Pods-DigDigDogs.framework"
-               BlueprintName = "Pods-DigDigDogs"
+               BlueprintIdentifier = "9B4DBC61E54B8DF29E82E9F0F6F0638D"
+               BuildableName = "Zephyr.framework"
+               BlueprintName = "Zephyr"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

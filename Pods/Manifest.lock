@@ -1,16 +1,20 @@
 PODS:
   - SwiftGifOrigin (1.6.1)
+  - Zephyr (3.6.0)
 
 DEPENDENCIES:
   - SwiftGifOrigin (~> 1.6.1)
+  - Zephyr
 
 SPEC REPOS:
   trunk:
     - SwiftGifOrigin
+    - Zephyr
 
 SPEC CHECKSUMS:
   SwiftGifOrigin: d6679d3ebe9df2e049a84bc52582635107b581f6
+  Zephyr: da639b1d1bb46a6f2034a862175dd91971968482
 
-PODFILE CHECKSUM: 423950212227e2c289954659cb6646417a701baf
+PODFILE CHECKSUM: 5ac139fa560f7c97745ec0b8eed6523c57e0bbc6
 
 COCOAPODS: 1.9.3

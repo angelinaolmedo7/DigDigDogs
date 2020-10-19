@@ -7,5 +7,6 @@ target 'DigDigDogs' do
 
   # Pods for DigDigDogs
   pod ‘SwiftGifOrigin’, ‘~> 1.6.1'
+  pod 'Zephyr'
 
 end
