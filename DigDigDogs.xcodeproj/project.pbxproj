@@ -125,7 +125,6 @@
 				295E927B242214580052C890 /* Controller */,
 				295E926A2421A5B00052C890 /* Models */,
 				295E92612421948C0052C890 /* Views */,
-				295E924D242193ED0052C890 /* AppDelegate.swift */,
 				295E924F242193ED0052C890 /* SceneDelegate.swift */,
 				295E9251242193ED0052C890 /* ContentView.swift */,
 				295E9253242193F10052C890 /* Assets.xcassets */,
@@ -170,6 +169,7 @@
 		295E927B242214580052C890 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				295E924D242193ED0052C890 /* AppDelegate.swift */,
 				295E927C2422146F0052C890 /* UIViewControllerExtensions.swift */,
 			);
 			path = Controller;
