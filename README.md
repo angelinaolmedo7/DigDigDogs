@@ -18,3 +18,6 @@ Open in Xcode. Press the play button to build & run!
 If you notice any errors, feel free to raise issues here in the repo. 
 
 Reach out to me with a picture of your own dog and they might end up in the game!
+___
+
+This project was moved from [digDigDogs-old](https://github.com/angelinaolmedo7/digDigDogs-old)
