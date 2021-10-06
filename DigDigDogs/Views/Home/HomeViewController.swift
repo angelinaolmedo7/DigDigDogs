@@ -7,8 +7,8 @@
 //
 
 import UIKit
-import SwiftGifOrigin
-import Zephyr
+//import SwiftGifOrigin
+//import Zephyr
 
 class HomeViewController: UIViewController {
     
@@ -38,10 +38,10 @@ class HomeViewController: UIViewController {
         buttons = [dogOneButton, dogTwoButton, dogThreeButton]
         
         persistence = PersistenceLayer()
-//        persistence.reset() // reset for testing
+        persistence.reset() // reset for testing
         user = persistence.user
-        Zephyr.debugEnabled = true
-        Zephyr.sync(keys: ["USER-DIGDIGDOGS"])
+//        Zephyr.debugEnabled = true
+//        Zephyr.sync(keys: ["USER-DIGDIGDOGS"])
         
         
         setUpBackground() // add background view. For now default grass.
@@ -94,34 +94,74 @@ class HomeViewController: UIViewController {
         self.present(dogController, animated: true, completion: nil)
     }
     
-    @IBAction func dogOnePressed(_ sender: Any) {
+    @IBAction func dogOnePressed(_ sender: UIButton) {
         popInOut(stack: dogOneStackView, dog: user.myDogs[user.activeDogs[0]])
 //        let gif = UIImage.gif(name: "mutt-dig")
 //        self.dogOneButton.setImage(gif, for: .normal)
 //        DispatchQueue.main.asyncAfter(deadline: .now() + (gif?.duration ?? 1)) {
 //            self.dogOneButton.setImage(UIImage(named: "mutt-full"), for: .normal)
 //        }
-        
+        dogBounce(button: sender)
     }
-    @IBAction func dogTwoPressed(_ sender: Any) {
+    @IBAction func dogTwoPressed(_ sender: UIButton) {
         popInOut(stack: dogTwoStackView, dog: user.myDogs[user.activeDogs[1]])
+        dogBounce(button: sender)
     }
-    @IBAction func dogThreePressed(_ sender: Any) {
+    @IBAction func dogThreePressed(_ sender: UIButton) {
         popInOut(stack: dogThreeStackView, dog: user.myDogs[user.activeDogs[2]])
+        dogBounce(button: sender)
+    }
+    
+    func dogBounce(button: UIButton) {
+        button.transform = CGAffineTransform(scaleX: 0.6, y: 0.6)
+
+        UIView.animate(withDuration: 1.0,
+                                   delay: 0,
+                                   usingSpringWithDamping: CGFloat(0.20),
+                                   initialSpringVelocity: CGFloat(3.0),
+                                   options: UIView.AnimationOptions.allowUserInteraction,
+                                   animations: {
+                                        button.transform = CGAffineTransform.identity
+            },
+                                   completion: { Void in()  }
+        )
     }
     
 func popInOut(stack: UIStackView!, dog: Dog!) {
     let itemString = self.persistence.handleItemRoll(dog.generateResource())
     (stack.arrangedSubviews[1] as! UILabel).text = itemString.0
     (stack.arrangedSubviews[0] as! UIImageView).image = UIImage(named: itemString.1)!
-        UIView.animate(withDuration: 0.2, animations: {
-            stack.arrangedSubviews[0].isHidden = false
-            stack.arrangedSubviews[1].isHidden = false
-        }) { (completed) in
-            UIView.animate(withDuration: 0.2, delay: 0.2, options: [], animations: {
-                stack.arrangedSubviews[0].isHidden = true
-                stack.arrangedSubviews[1].isHidden = true
-            }, completion: nil)
-        }
+//        UIView.animate(withDuration: 0.2, animations: {
+//            stack.arrangedSubviews[0].isHidden = false
+//            stack.arrangedSubviews[1].isHidden = false
+//        }) { (completed) in
+//            UIView.animate(withDuration: 0.2, delay: 0.2, options: [], animations: {
+//                stack.arrangedSubviews[0].isHidden = true
+//                stack.arrangedSubviews[1].isHidden = true
+//            }, completion: nil)
+//        }
+    stack.alpha = 0
+    stack.arrangedSubviews[0].isHidden = false
+    stack.arrangedSubviews[1].isHidden = false
+    stack.fadeIn(completion: {
+            (finished: Bool) -> Void in
+            stack.fadeOut()
+            })
     }
+}
+
+extension UIView {
+
+    func fadeIn(duration: TimeInterval = 0.3, delay: TimeInterval = 0.0, completion: @escaping ((Bool) -> Void) = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.alpha = 1.0
+        }, completion: completion)
+    }
+
+    func fadeOut(duration: TimeInterval = 0.3, delay: TimeInterval = 0.2, completion: @escaping (Bool) -> Void = {(finished: Bool) -> Void in}) {
+        UIView.animate(withDuration: duration, delay: delay, options: UIView.AnimationOptions.curveEaseIn, animations: {
+            self.alpha = 0.0
+        }, completion: completion)
+    }
+
 }
