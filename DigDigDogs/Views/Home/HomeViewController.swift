@@ -19,6 +19,10 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var dogTwoButton: UIButton!
     @IBOutlet weak var dogThreeButton: UIButton!
     
+    var dogOneReady: Bool = true
+    var dogTwoReady: Bool = true
+    var dogThreeReady: Bool = true
+    
     @IBOutlet weak var dogOneStackView: UIStackView!
     @IBOutlet weak var dogOneItemImage: UIImageView!
     @IBOutlet weak var dogOneItemLabel: UILabel!
@@ -95,21 +99,36 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func dogOnePressed(_ sender: UIButton) {
-        popInOut(stack: dogOneStackView, dog: user.myDogs[user.activeDogs[0]])
-//        let gif = UIImage.gif(name: "mutt-dig")
-//        self.dogOneButton.setImage(gif, for: .normal)
-//        DispatchQueue.main.asyncAfter(deadline: .now() + (gif?.duration ?? 1)) {
-//            self.dogOneButton.setImage(UIImage(named: "mutt-full"), for: .normal)
-//        }
-        dogBounce(button: sender)
+        if dogOneReady {
+            dogOneReady = false
+            popInOut(stack: dogOneStackView, dog: user.myDogs[user.activeDogs[0]], readyVar: ({ void in
+                self.dogOneReady = true
+            }))
+    //        let gif = UIImage.gif(name: "mutt-dig")
+    //        self.dogOneButton.setImage(gif, for: .normal)
+    //        DispatchQueue.main.asyncAfter(deadline: .now() + (gif?.duration ?? 1)) {
+    //            self.dogOneButton.setImage(UIImage(named: "mutt-full"), for: .normal)
+    //        }
+            dogBounce(button: sender)
+        }
     }
     @IBAction func dogTwoPressed(_ sender: UIButton) {
-        popInOut(stack: dogTwoStackView, dog: user.myDogs[user.activeDogs[1]])
-        dogBounce(button: sender)
+        if dogTwoReady {
+            dogTwoReady = false
+            popInOut(stack: dogTwoStackView, dog: user.myDogs[user.activeDogs[1]], readyVar: ({ void in
+                self.dogTwoReady = true
+            }))
+            dogBounce(button: sender)
+        }
     }
     @IBAction func dogThreePressed(_ sender: UIButton) {
-        popInOut(stack: dogThreeStackView, dog: user.myDogs[user.activeDogs[2]])
-        dogBounce(button: sender)
+        if dogThreeReady {
+            dogThreeReady = false
+            popInOut(stack: dogThreeStackView, dog: user.myDogs[user.activeDogs[2]], readyVar: ({ void in
+                self.dogThreeReady = true
+            }))
+            dogBounce(button: sender)
+        }
     }
     
     func dogBounce(button: UIButton) {
@@ -127,7 +146,7 @@ class HomeViewController: UIViewController {
         )
     }
     
-func popInOut(stack: UIStackView!, dog: Dog!) {
+    func popInOut(stack: UIStackView!, dog: Dog!, readyVar: @escaping ((Bool) -> Void)) {
     let itemString = self.persistence.handleItemRoll(dog.generateResource())
     (stack.arrangedSubviews[1] as! UILabel).text = itemString.0
     (stack.arrangedSubviews[0] as! UIImageView).image = UIImage(named: itemString.1)!
@@ -145,7 +164,7 @@ func popInOut(stack: UIStackView!, dog: Dog!) {
     stack.arrangedSubviews[1].isHidden = false
     stack.fadeIn(completion: {
             (finished: Bool) -> Void in
-            stack.fadeOut()
+        stack.fadeOut(completion: readyVar)
             })
     }
 }
