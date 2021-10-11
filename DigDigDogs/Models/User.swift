@@ -26,16 +26,16 @@ class User: Codable {
             dogsDict["ylab"]!,
             dogsDict["blab"]!,
             dogsDict["clab"]!,
-            dogsDict["gshep"]!,
             dogsDict["gret"]!,
             dogsDict["samoyed"]!,
+            dogsDict["gshep"]!,
             dogsDict["gsp"]!,
             dogsDict["weim"]!,
             dogsDict["husky"]!,
             dogsDict["bullterr"]!,
             dogsDict["dalmatian"]!,
-            
             dogsDict["cat"]!]
+        
         activeDogs = [0]  // start with only mutt active
         unlockedDogs = [0]  // mutt is default unlocked
         lockedDogs = Array(1..<myDogs.count)  // rest are locked.

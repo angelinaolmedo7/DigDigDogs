@@ -42,7 +42,7 @@ class HomeViewController: UIViewController {
         buttons = [dogOneButton, dogTwoButton, dogThreeButton]
         
         persistence = PersistenceLayer()
-//        persistence.reset() // reset for testing
+        persistence.reset() // reset for testing
         user = persistence.user
 //        Zephyr.debugEnabled = true
 //        Zephyr.sync(keys: ["USER-DIGDIGDOGS"])
