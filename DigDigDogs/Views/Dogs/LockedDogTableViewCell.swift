@@ -16,6 +16,24 @@ class LockedDogTableViewCell: UITableViewCell {
     @IBOutlet weak var itemOneImage: UIImageView!
     @IBOutlet weak var itemOneLabel: UILabel!
     
+    @IBOutlet weak var itemTwoImage: UIImageView!
+    @IBOutlet weak var itemTwoLabel: UILabel!
+    
+    @IBOutlet weak var itemThreeImage: UIImageView!
+    @IBOutlet weak var itemThreeLabel: UILabel!
+    
+    @IBOutlet weak var itemFourImage: UIImageView!
+    @IBOutlet weak var itemFourLabel: UILabel!
+    
+    @IBOutlet weak var itemFiveImage: UIImageView!
+    @IBOutlet weak var itemFiveLabel: UILabel!
+    
+    @IBOutlet weak var itemSixLabel: UILabel!
+    @IBOutlet weak var itemSixImage: UIImageView!
+    
+    var itemImages: [UIImageView]!
+    var itemLabels: [UILabel]!
+        
     static var nib: UINib {
         return UINib(nibName: String(describing: self), bundle: nil)
     }
@@ -23,6 +41,11 @@ class LockedDogTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        itemImages = [itemOneImage, itemTwoImage, itemThreeImage,
+                      itemFourImage, itemFiveImage, itemSixImage]
+        itemLabels = [itemOneLabel, itemTwoLabel, itemThreeLabel,
+                      itemFourLabel, itemFiveLabel, itemSixLabel]
+
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -39,9 +62,13 @@ class LockedDogTableViewCell: UITableViewCell {
 //            priceString += "\(String(item.quantity * -1)) \(item.item.name!), "
 //        }
 //        priceString.removeLast(2)
-        
-        self.itemOneImage.image = dog.purchaseCost[1].item.getUIImage()
-        self.itemOneLabel.text = "\(dog.purchaseCost[1].item.quantity!)"
+        for ind in (0..<dog.purchaseCost.count) {
+            self.itemImages[ind].image = dog.purchaseCost[ind].item.getUIImage()
+            self.itemLabels[ind].text = "\(dog.purchaseCost[ind].item.quantity!)"
+            self.itemLabels[ind].textColor = .white
+            self.itemImages[ind].isHidden = false
+            self.itemLabels[ind].isHidden = false
+        }
 
     }
     

@@ -163,8 +163,18 @@
             </constraints>
             <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
             <connections>
+                <outlet property="itemFiveImage" destination="p9t-MD-TGf" id="WoC-lP-RrF"/>
+                <outlet property="itemFiveLabel" destination="ldz-MK-T3o" id="atU-lq-Tjf"/>
+                <outlet property="itemFourImage" destination="F8M-fr-YXe" id="1sY-44-nVZ"/>
+                <outlet property="itemFourLabel" destination="7hA-Bu-aEc" id="HSb-1v-Axg"/>
                 <outlet property="itemOneImage" destination="Mtx-l3-8KV" id="4G9-gY-7AS"/>
                 <outlet property="itemOneLabel" destination="5Qc-zA-WCF" id="3Nc-GM-dyR"/>
+                <outlet property="itemSixImage" destination="FT4-gU-IbU" id="WWQ-xx-iWB"/>
+                <outlet property="itemSixLabel" destination="62j-Ey-LWt" id="61M-GU-4yq"/>
+                <outlet property="itemThreeImage" destination="GV2-4d-jVQ" id="X4l-Gt-aqQ"/>
+                <outlet property="itemThreeLabel" destination="icN-JJ-z5Z" id="3KN-La-2Ao"/>
+                <outlet property="itemTwoImage" destination="JWj-ge-snQ" id="Kpa-JT-RPo"/>
+                <outlet property="itemTwoLabel" destination="F2r-Vq-wzf" id="Ygb-JY-Z7A"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="127.56696428571428"/>
         </tableViewCell>
