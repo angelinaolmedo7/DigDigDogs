@@ -38,4 +38,8 @@ struct Item : Hashable, Codable{
     func isSameItem(other: Item) -> Bool {
         return(other.name == self.name && other.rarity == self.rarity && other.image == self.image)
     }
+    
+    func getUIImage() -> UIImage? {
+        return UIImage(named: self.image)
+    }
 }
