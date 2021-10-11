@@ -62,9 +62,19 @@ class LockedDogTableViewCell: UITableViewCell {
 //            priceString += "\(String(item.quantity * -1)) \(item.item.name!), "
 //        }
 //        priceString.removeLast(2)
+        
+        // reset to blank
+        for itemImage in self.itemImages {
+            itemImage.isHidden = true
+        }
+        for itemLabel in self.itemLabels {
+            itemLabel.isHidden = true
+        }
+        
+        // populate with items
         for ind in (0..<dog.purchaseCost.count) {
             self.itemImages[ind].image = dog.purchaseCost[ind].item.getUIImage()
-            self.itemLabels[ind].text = "\(dog.purchaseCost[ind].item.quantity!)"
+            self.itemLabels[ind].text = "\(dog.purchaseCost[ind].quantity)"
             self.itemLabels[ind].textColor = .white
             self.itemImages[ind].isHidden = false
             self.itemLabels[ind].isHidden = false
