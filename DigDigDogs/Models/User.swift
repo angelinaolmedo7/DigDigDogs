@@ -27,13 +27,13 @@ class User: Codable {
             dogsDict["blab"]!,
             dogsDict["clab"]!,
             dogsDict["gret"]!,
-            dogsDict["samoyed"]!,
             dogsDict["gshep"]!,
-            dogsDict["gsp"]!,
+            dogsDict["samoyed"]!,
             dogsDict["weim"]!,
             dogsDict["husky"]!,
-            dogsDict["bullterr"]!,
             dogsDict["dalmatian"]!,
+            dogsDict["gsp"]!,
+            dogsDict["bullterr"]!,
             dogsDict["cat"]!]
         
         activeDogs = [0]  // start with only mutt active
