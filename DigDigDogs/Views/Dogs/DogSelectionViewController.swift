@@ -81,8 +81,15 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
     
     func tableView(_ tableView: UITableView,
                heightForRowAt indexPath: IndexPath) -> CGFloat {
+        let dog = user.myDogs[indexPath.row]
+        if dog.unlocked {
+            return 100
+        }
+        else {
+            return 150
+        }
 
-        return (100)
+//        return (100)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
