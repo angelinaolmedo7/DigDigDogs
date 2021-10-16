@@ -73,7 +73,7 @@ extension DogSelectionViewController: UITableViewDataSource, UITableViewDelegate
         }
         else {
             let cell = tableView.dequeueReusableCell(withIdentifier: LockedDogTableViewCell.identifier, for: indexPath) as! LockedDogTableViewCell
-            cell.setInfo(dog: dog)
+            cell.setInfo(dog: dog, unlockable: user.inventory.softPriceCheck(dog: dog))
             return cell
         }
         

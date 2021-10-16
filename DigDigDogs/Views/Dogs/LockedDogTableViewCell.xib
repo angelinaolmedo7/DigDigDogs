@@ -22,7 +22,7 @@
                         <color key="backgroundColor" systemColor="viewFlipsideBackgroundColor"/>
                     </view>
                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="3" translatesAutoresizingMaskIntoConstraints="NO" id="dv9-z8-PK5">
-                        <rect key="frame" x="10" y="5" width="300" height="107.5"/>
+                        <rect key="frame" x="10" y="5" width="300" height="98"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="hUv-fT-Mf7" userLabel="Row One">
                                 <rect key="frame" x="0.0" y="0.0" width="300" height="35.5"/>
@@ -143,11 +143,12 @@
                                     </stackView>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2UL-Kc-et4">
-                                <rect key="frame" x="0.0" y="77.5" width="300" height="30"/>
-                                <color key="backgroundColor" red="0.66678303480000001" green="0.88885515930000003" blue="0.9907494187" alpha="1" colorSpace="deviceRGB"/>
-                                <state key="normal" title="Insufficient Resources"/>
-                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Missing Components" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DwO-Rz-IGJ">
+                                <rect key="frame" x="0.0" y="77.5" width="300" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <constraints>
                             <constraint firstItem="FT4-gU-IbU" firstAttribute="height" secondItem="Mtx-l3-8KV" secondAttribute="height" id="2Nw-f8-aaq"/>
@@ -187,6 +188,7 @@
                 <outlet property="itemThreeLabel" destination="icN-JJ-z5Z" id="3KN-La-2Ao"/>
                 <outlet property="itemTwoImage" destination="JWj-ge-snQ" id="Kpa-JT-RPo"/>
                 <outlet property="itemTwoLabel" destination="F2r-Vq-wzf" id="Ygb-JY-Z7A"/>
+                <outlet property="summonLabel" destination="DwO-Rz-IGJ" id="7hn-JA-7uD"/>
             </connections>
             <point key="canvasLocation" x="137.68115942028987" y="127.56696428571428"/>
         </tableViewCell>

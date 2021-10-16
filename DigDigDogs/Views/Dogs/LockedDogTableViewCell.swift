@@ -12,6 +12,8 @@ class LockedDogTableViewCell: UITableViewCell {
     
     static let identifier = "LockedDogTableViewCell"
     
+    @IBOutlet weak var summonLabel: UILabel!
+    
 //    Up to six items displayed
     @IBOutlet weak var itemOneImage: UIImageView!
     @IBOutlet weak var itemOneLabel: UILabel!
@@ -54,7 +56,7 @@ class LockedDogTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setInfo (dog: Dog) {
+    func setInfo (dog: Dog, unlockable: Bool = true) {
         // the following was for condensing the cost into one string
         
 //        var priceString: String = "Cost: "
@@ -79,6 +81,10 @@ class LockedDogTableViewCell: UITableViewCell {
             self.itemImages[ind].isHidden = false
             self.itemLabels[ind].isHidden = false
         }
-
+        
+        self.summonLabel.text = "Insufficient components"
+        if unlockable {
+            self.summonLabel.text = "Summon now!"
+        }
     }
 }

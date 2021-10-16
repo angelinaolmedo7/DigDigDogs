@@ -115,6 +115,16 @@ class Inventory: Codable {
         }
     }
     
+    func softPriceCheck(dog: Dog!) -> Bool {
+        // returns true if sufficient resources without actually making the purchase
+        for price in dog.purchaseCost {
+            if (self.getItemByName(itemName: price.item.name)?.quantity)! < (price.quantity * -1) {
+                return false  // insufficient resources
+            }
+        }
+        return true
+    }
+    
     func purchaseDog(dog: Dog!) -> Bool {
         for price in dog.purchaseCost {
             if (self.getItemByName(itemName: price.item.name)?.quantity)! < (price.quantity * -1) {
